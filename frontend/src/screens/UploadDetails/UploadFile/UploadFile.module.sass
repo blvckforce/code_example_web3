@@ -1,0 +1,65 @@
+@import ../../../styles/helpers
+
+$inner-padding: 32px
+
+.file
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 182px
+  margin-top: 16px
+  border-radius: 16px
+  overflow: hidden
+  z-index: 1
+  background: $neutrals7
+  +dark
+    background: $neutrals2
+
+  cursor: pointer
+
+.load
+  font-size: 400px
+  opacity: 0
+  cursor: pointer
+  z-index: 1
+
+.file, .file_preview
+  margin-top: 16px
+
+.info
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  z-index: 0
+
+
+.file_preview
+    position: relative
+    width: 100%
+    border: 1px dashed $neutrals4
+    border-radius: 8px
+    text-align: center
+    padding: $inner-padding
+    display: flex
+    +dark
+        border-color: $neutrals8
+    img
+        margin: 0 auto
+        max-width: 80%
+    .icon
+        position: absolute
+        width: 48px
+        height: 48px
+        right: $inner-padding
+        top: $inner-padding
+        border: 2px solid $navy_blue
+        box-sizing: border-box
+        border-radius: 48px
+        svg
+            padding: 3px
+            +dark
+                fill: $neutrals8

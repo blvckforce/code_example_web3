@@ -1,0 +1,71 @@
+@import ../../styles/helpers
+
+.section
+    text-align: center
+    padding-top: 0
+
+.top
+    max-width: 736px
+    text-align: left
+    margin-bottom: 30px
+
+.title
+    margin-bottom: 20px
+
+.info
+    color: $neutrals4
+
+.list
+    justify-content: center
+    display: flex
+    margin: 0 -16px 32px
+    +m
+        display: block
+        margin: 0 0 32px
+
+.item
+    display: block
+    flex: 0 0 calc(35% - 32px)
+    width: calc(35% - 32px)
+    margin: 0 16px
+    padding: 80px 70px
+    border-radius: 16px
+    border: 1px solid $neutrals6
+    transition: box-shadow .2s
+    +d
+        flex: 0 0 calc(40% - 32px)
+        width: calc(40% - 32px)
+    +m
+        width: 100%
+        margin: 0
+
+    +dark
+        border-color: $neutrals3
+    &:not(:last-child)
+        +m
+            margin-bottom: 24px
+    &:hover
+        box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12)
+        border: 2px solid $primary
+        background: $neutrals6
+        +dark
+            background: $neutrals1_6
+
+    .button
+        margin-top: 50px
+        +body-bold-1
+        color: $neutrals4
+        +dark
+            color: $neutrals8
+
+.preview
+    margin-bottom: 24px
+    img
+        width: 100%
+        border-radius: 8px
+        max-width: 186px
+
+.note
+    +caption-2
+    color: $neutrals4
+    text-align: left

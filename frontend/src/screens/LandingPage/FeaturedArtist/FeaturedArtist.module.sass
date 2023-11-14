@@ -1,0 +1,125 @@
+@import ../../../styles/helpers
+
+.section
+    background: transparent
+    margin-top: 50px
+
+.slider
+    width: 60%
+    margin: 0 auto
+    
+    button[class^="slick-arrow"]
+        bottom: auto
+        [class^="slick-nexmt"]
+            right: -10%;
+            top: 50%;
+
+.slide
+    background-size: cover
+    //height: 100%
+    height: 400px
+    position: relative
+    border-radius: 15px
+    +t
+        height: 200px
+
+.slide_image
+    width: 100%
+    min-height: inherit
+    height: inherit
+
+.dots
+    display: flex !important
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+    position: absolute
+    bottom: 7%
+    width: 100%
+    overflow: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        display: none
+
+    +m
+        bottom: 30px
+
+    li
+        button
+            width: 59px
+            height: 5px
+            background: $neutrals1
+            opacity: 0.3
+            border-radius: 44px
+            margin: 0 5px
+            overflow: hidden
+            color: transparent
+            +m
+                width: 20px
+        
+        &[class^="slick-active"]
+            button
+                background: $neutrals8
+                opacity: 1
+
+.tag_wrapper
+    width: 100%
+    display: flex
+    position: absolute
+    justify-content: center
+    
+.tag
+    background: $neutrals1
+    opacity: .7
+    padding: 13px 16px
+    border-radius: 50px
+    margin-top: 30px
+    +m
+        margin-top: 20px
+        padding: 8px 12px
+    
+.info
+    display: flex
+    align-items: center
+    background: $neutrals1_6
+    border-radius: 0px 0px 15px 15px
+    width: 100%
+    padding: 20px
+    margin-top: -20px
+    z-index: 2
+    position: absolute
+    +t
+        margin-top: -10px
+
+    img
+        width: 70px
+        height: 70px
+        border-radius: 100px
+        margin-right: 10px
+    
+
+    .footer
+        display: flex
+        flex-grow: 1
+        align-items: center
+        justify-content: space-between
+        width: auto
+        span
+            display: inline-block
+        +m 
+            flex-direction: column
+            align-items: start
+
+    .details
+        display: flex
+        flex-direction: column
+        span
+            max-width: 200px
+            +m
+                max-width: 150px
+
+.tag,.info
+    svg
+        margin-right: 10px

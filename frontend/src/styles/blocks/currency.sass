@@ -1,0 +1,81 @@
+@import ../../styles/helpers
+
+.currency
+  font-weight: 700
+  white-space: nowrap
+
+  &:before
+    content: "logo"
+    width: 32px
+    display: inline-block
+    background-image: url('../assets/icon-light.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    color: transparent
+
+  &:after
+    content: " SWAPP"
+
+.currency.n2
+  &:after
+    content: ""
+
+  &:before
+    content: "logo"
+    background-image: url('../assets/icon-currency.png')
+
+.currency.small
+  &:before
+    background-size: 12px
+    content: "lo"
+    background-position: center
+
+.currency.no-icon
+  &:before
+    content: "-"
+    background: none
+
+.currency.no-text
+  &:after
+    content: "-"
+    background: none
+    display: none
+
+.currency.dark
+  color: $neutrals2
+
+  &:before
+    background-image: url('../assets/icon-dark.svg')
+
+  &:after
+    color: $neutrals5
+
+.currency.light
+  color: $neutrals8
+  +caption-2
+
+  &:before
+    background-image: url('../assets/icon-light.svg')
+
+    &:after
+      color: $neutrals5
+
+.currency.eth
+  &:before
+    content: "logo"
+    display: inline-block
+    width: 32px
+    background-image: url('../../styles/assets/eth_icon.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    color: transparent
+
+.currency.weth
+  &:before
+    content: "logo-weth"
+    display: inline-block
+    width: 32px
+    background-image: url('../../styles/assets/weth_icon.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    color: transparent

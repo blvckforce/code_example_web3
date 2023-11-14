@@ -1,0 +1,64 @@
+@import "/src/styles/helpers";
+
+$spacing: 20px;
+$space-to-top: 15px;
+
+$horizontal-gap: $spacing / 2;
+$vertical-gap: $spacing / 2;
+
+.root {
+  position: relative;
+}
+
+.body {
+  position: absolute;
+  right: 0;
+  top: calc(100% + #{$vertical-gap});
+  padding: $spacing;
+  z-index: 4;
+  opacity: 0;
+  transform: scale(.9);
+  background-color: $neutrals1_5;
+  animation: show .4s both;
+  border-radius: $spacing;
+  min-width: 200px;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: $vertical-gap;
+
+  &Item {
+    display: flex;
+    column-gap: $horizontal-gap;
+    color: $neutrals8;
+    transition: border-color 0.4s;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: transparent;
+    padding: 0 10px;
+
+    span {
+      white-space: pre;
+    }
+
+    &:hover {
+      border-color: $blue-button-color;
+    }
+  }
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

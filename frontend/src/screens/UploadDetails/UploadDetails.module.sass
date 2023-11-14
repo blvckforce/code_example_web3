@@ -1,0 +1,404 @@
+@import ../../styles/helpers
+
+.section
+  padding-top: 0
+
+.container
+  display: flex
+  align-items: flex-start
+  +t
+    display: block
+
+.wrapper
+  flex: 0 0 calc(100% - 352px)
+  width: calc(100% - 352px)
+  padding-right: 128px
+  +x
+    padding-right: 64px
+  +d
+    flex: 0 0 calc(100% - 304px)
+    width: calc(100% - 304px)
+    padding-right: 32px
+  +t
+    width: 100%
+    padding: 0
+
+.preview
+  flex-shrink: 0
+  width: 352px
+  +d
+    width: 304px
+  +t
+    display: flex
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 48px
+    background: rgba($neutrals1, .9)
+    overflow: auto
+    z-index: 999
+    visibility: hidden
+    opacity: 0
+    transition: all .4s
+    +dark
+      background: rgba($neutrals2, .9)
+    &.active
+      visibility: visible
+      opacity: 1
+  +m
+    padding: 32px 16px
+
+.head
+  display: flex
+  margin-bottom: 40px
+  +d
+    flex-direction: column-reverse
+    align-items: flex-start
+  +m
+    margin-bottom: 32px
+
+  .button
+    flex-shrink: 0
+    margin-left: 24px
+    +d
+      margin: 0 0 16px
+
+.title
+  margin-right: auto
+
+.description
+  //width: 100%
+  color: $neutrals4
+  margin-bottom: 50px
+  +m
+    margin-bottom: 32px
+
+.list
+  margin-bottom: 40px
+  padding-bottom: 40px
+  border-bottom: 1px solid $neutrals6
+  +m
+    margin-bottom: 32px
+    padding-bottom: 32px
+  +dark
+    border-color: $neutrals3
+
+.item
+  &:not(:last-child)
+    margin-bottom: 40px
+    +m
+      margin-bottom: 32px
+
+.note
+  margin-top: 4px
+  +caption-2
+  color: $neutrals4
+
+.load
+  position: absolute
+  top: 0
+  left: 0
+  font-size: 400px
+  opacity: 0
+
+.icon
+  margin-bottom: 10px
+
+  svg
+    fill: $neutrals4
+
+.format
+  +caption-2
+  color: $neutrals4
+
+.category
+  +body-bold-2
+
+.mb
+  margin-bottom: 32px
+  +m
+    margin-bottom: 20px
+
+.fieldset
+  margin-top: 32px
+
+  .field
+    &:not(:first-child)
+      margin-top: 32px
+      +m
+        margin-top: 20px
+
+  &.percent
+    &:after
+      content: "%"
+      color: $navy_blue
+      font-weight: 600
+      font-size: 14px
+
+.labelWrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 15px
+
+.row
+  display: flex
+  +m
+    margin: 0
+    display: flex
+    justify-content: space-between
+
+  &.end
+    align-items: end
+    margin-bottom: 30px
+
+.col
+  flex: 0 0 calc(33.333%)
+  width: calc(33.333%)
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  +m
+    width: 100%
+    margin: 0
+
+
+.col12
+  flex: 1
+  width: 100%
+
+
+.col9
+  flex: 0 0 calc(75%)
+  width: calc(75%)
+
+.col8
+  flex: 0 0 calc(66.667%)
+  width: calc(66.667%)
+
+.col7
+  flex: 0 0 calc(58.333%)
+  width: calc(58.333%)
+
+.col6
+  flex: 0 0 50%
+  width: 50%
+
+  &:not(:last-child)
+    margin-right: 10px
+
+.col5
+  flex: 0 0 calc(41.666%)
+  width: calc(41.666%)
+
+.col4
+  flex: 0 0 calc(33.333%)
+  width: calc(33.333%)
+
+.col3
+  flex: 0 0 calc(25%)
+  width: calc(25%)
+
+.col2
+  flex: 0 0 calc(16.666%)
+  width: calc(16.666%)
+
+.options
+  margin-bottom: 40px
+  +m
+    margin-bottom: 32px
+
+.option
+  display: flex
+  align-items: flex-start
+
+  &:not(:last-child)
+    margin-bottom: 32px
+
+  &.wrap
+    flex-wrap: wrap
+
+.box
+  flex-grow: 1
+
+.switch
+  flex-shrink: 0
+  margin-left: 24px
+
+.text
+  margin-top: 4px
+  +caption-2
+  color: $neutrals4
+
+.foot
+  display: flex
+  align-items: center
+  +m
+    display: block
+    text-align: center
+
+  .button
+    min-width: 150px
+    +m
+      width: 100%
+
+    &:not(:last-child)
+      margin-right: 24px
+      +m
+        margin: 0 0 12px
+
+.saving
+  display: inline-flex
+  align-items: center
+  margin-left: auto
+  +button-1
+
+.loader
+  margin-left: 24px
+
+.mode
+  text-transform: capitalize
+  padding-left: 5px
+
+.row_mobile
+  +m
+    .col
+      min-width: 47%
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+
+.radioCard
+  width: 100%
+  height: 195px
+  display: flex
+  cursor: pointer
+  +m
+    width: 100%
+    display: inline-flex
+    height: 145px
+
+  .content
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    background: transparent
+    box-sizing: border-box
+    border-radius: 16px
+    align-items: center
+    justify-content: center
+    border: 2px solid $neutrals6
+    +dark
+      border-color: $navy_blue
+
+    div:first-child
+      width: 40px
+      height: 48px
+      font-size: 40px
+      line-height: 48px
+      margin-bottom: 45px
+      +m
+        margin-bottom: 15px
+
+
+    div:nth-child(2)
+      +body-bold-2
+      font-weight: bold
+
+  input
+    display: none
+
+  [data-checked=true]
+    border-color: $primary
+    background: $neutrals6
+    +dark
+      border-color: $primary
+      background: $neutrals1_6
+
+.openmodal
+  width: 32px
+  height: 32px
+  border: 2px solid $primary
+  box-sizing: border-box
+  border-radius: 32px
+
+  svg
+    fill: $primary
+    +dark
+      fill: $primary
+
+
+.feature
+  background: $neutrals8
+  border: 1px solid $neutrals4
+  display: flex
+  flex-direction: row
+  min-width: 100px
+  align-items: center
+  justify-content: space-between
+  padding: 12px
+  box-sizing: border-box
+  border-radius: 8px
+  font-weight: bold
+  height: 44px
+  margin: 5px 20px 0 0
+
+  > div:first-child
+    +m
+      +ellipsis
+    +s
+      max-width: 80%
+
+  > div:nth-child(2)
+    font-weight: normal
+    display: flex
+    flex-direction: row
+    color: $neutrals4
+    margin-left: 50px
+
+    > div
+      margin-right: 4px
+
+  +m
+    margin: 5px 5px 0 0
+    min-width: calc(50% - 10px)
+    > div:nth-child(2)
+      margin-left: auto
+  +dark
+    background: $neutrals2
+
+.property
+  flex-direction: column
+  min-height: 74px
+  justify-content: center
+
+  > div:nth-child(2)
+    font-weight: normal
+    margin-left: 0
+
+.invisible
+  +invisible
+
+.error
+  margin-top: 10px
+  margin-bottom: 10px
+  +caption-2
+  color: $pink
+  font-weight: 100
+  max-height: 1em
+  line-height: 1
+  display: inline-block
+
+.fullWidthRow
+  width: 100%
+  margin-top: -30px
+  margin-bottom: 10px
+
+small
+  color: $neutrals4

@@ -1,0 +1,18 @@
+@import "./../../styles/helpers";
+
+.root {
+  @include button-1();
+  padding: 8px 15px;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+.success {
+  color: $green;
+  background: $green_light;
+}
+
+.warning {
+  color: $yellow;
+  background: $yellow_light;
+}

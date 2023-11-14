@@ -1,0 +1,216 @@
+@import ../../../styles/helpers
+
+.top
+    position: relative
+    z-index: 3
+    display: flex
+    align-items: center
+    width: calc(100% - 352px)
+    padding-right: 128px
+    +x
+        padding-right: 64px
+    +d
+        width: calc(100% - 304px)
+        padding-right: 32px
+    +t
+        width: 100%
+        padding: 0
+
+.title
+    margin-right: auto
+
+.button
+    +m
+        width: 100%
+        margin-top: 16px
+
+.toggle
+    position: relative
+    margin-left: 24px
+    svg
+        &:nth-child(2)
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            opacity: 0
+    &.active
+        background: $primary
+        box-shadow: inset 0 0 0 2px $primary
+        +dark
+            background: $primary
+        svg
+            fill: $neutrals8
+            &:first-child
+                opacity: 0
+            &:nth-child(2)
+                opacity: 1
+
+.row
+    display: flex
+    align-items: flex-start
+    margin-top: -56px
+    +t
+        flex-direction: column-reverse
+        margin-top: 0
+
+.wrapper
+    flex-grow: 1
+    padding-right: 128px
+    margin-top: 80px
+    +x
+        padding-right: 64px
+    +d
+        padding-right: 32px
+    +t
+        width: 100%
+        margin-top: 40px
+        margin: 0 auto
+        padding-right: 0px
+
+.item
+    position: relative
+    display: flex
+    align-items: center
+    padding: 20px
+    border: 1px solid $neutrals2
+    box-sizing: border-box
+    border-radius: 16px
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    transition: background .2s
+    +m
+        padding-right: 32px
+    &:hover
+        background: $neutrals7
+        +dark
+            background: $neutrals2
+        &:before
+            transform: translateY(-50%) scale(0)
+        &:after
+            opacity: 1
+    &:not(:last-child)
+        margin-bottom: 16px
+
+.preview
+    position: relative
+    flex-shrink: 0
+    width: 68px
+    height: 68px
+    margin-right: 24px
+    +m
+        width: 64px
+        height: 64px
+        margin-right: 16px
+    & > img
+        width: 60px
+        height: 60px
+        border-radius: 8px
+        object-fit: cover
+
+.icon
+    position: absolute
+    top: -6px
+    left: -8px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    +m
+        width: 24px
+        height: 24px
+    img
+        max-width: 16px
+        +m
+            max-width: 12px
+
+.details
+    flex-grow: 1
+
+.subtitle
+    +body-bold-2
+    word-break: break-word
+    +m
+        margin-bottom: 3px
+        font-size: 14px
+
+.description
+    display: flex
+    gap: 10px
+    align-items: center
+    +caption-1
+    color: $neutrals3
+    +m
+        font-size: 12px
+    +dark
+        color: $neutrals4
+    div,span
+        display: inline-block
+        padding: 0 4px
+        color: $neutrals3
+        font-weight: 600
+        +dark
+            color: $neutrals8
+    img
+        border-radius: 48px
+        width: 20px
+        height: 20px
+        margin: 5px
+
+.date
+    +caption-1
+    color: $neutrals4
+
+.loader
+    margin: 32px auto 0
+
+[data-tag]
+    .icon
+        background-repeat: no-repeat
+        background-position: center
+        border: none
+        background-color: $pink
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACqSURBVHgBjVKBDcIwDGu4YCfsBE4ol8AHvNAT4IKJS9gHjAt6AnwQXOhYmkVdLaWVXDuKlTqnwMwR1bsWQLjnH9pMEA284L4l7nkNXxNHwzC0jCIR87tHHWujzHiphr7W/Z+jGBHHg9sRKZ1GrDeqs/LunI1DNpmGUXGBiCaDT5gswy3fz2RWb5cUuuNyacXsMrAk5aaD4MMs5vwZSXU74TqrwCPqilxf7gPMSk2ep/XUpQAAAABJRU5ErkJggg==")
+
+[data-tag=following]
+    .icon
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAYAAABPhbxiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABTSURBVHgBndCBCcAgEANAO2m7Sbu3CdYggojgx8AjPB5ormQGwFOP4piUMz+ARXOESL7nSG+uc1uowbbUhTBStFjh0J9mbBUxYru9EYdRz67lnh+JHMRxG4QnRwAAAABJRU5ErkJggg==")
+        background-color: $green
+    .preview
+        img
+            border-radius: 50%
+            width: 100%
+            height: 100%
+
+[data-tag=listings]
+    .icon
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgBnZANDYAgEIXFBEYwghFoZAQqEIEGRsAmRsAG5+FwYwh7B29742/3ce+mSSAi0uyd7dmBfbFXSW0sXlNBTRgEABjUAMTzkt5ddn/MNQAvnl3+YJVSd9q7/GEWAqK2xv5EEUr55FxbD6Cm8MYBEZDs14WmMZl8FstAFPPrifpmYprhhCADpwRAGABAckAD1A8Y0QOOQxbPJwatiQAAAABJRU5ErkJggg==")
+        background-color: $primary
+.loader
+    height: 50px
+    width: 50px
+    margin: 0 auto
+.small
+    height: 20px
+    width: 20px
+    margin: 0 !important
+h3
+    color: $neutrals3
+    +dark
+        color: $neutrals8
+.no_title
+    display: none
+
+.bottomWrapper
+    display: flex
+    justify-content: space-between
+    .readButton
+        color: white
+        border-radius: 20px
+        border: 1px solid white
+        padding: 0 16px
+        font-weight: bold
+        line-height: 10px
+        z-index: 2

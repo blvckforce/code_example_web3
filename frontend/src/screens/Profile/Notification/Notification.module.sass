@@ -1,0 +1,99 @@
+@import ../../../styles/helpers
+
+.container
+    background-color: $yellow_dark
+    margin: auto
+    box-shadow: 0 0 0 2px $yellow inset
+    width: 36%
+    padding: 20px 16px 10px 16px
+    border-radius: 16px
+    margin-top: 10px
+    margin-bottom: 20px
+    +t
+        width: 50%
+    +m
+        width: 100%
+
+.row
+    justify-content: start
+    align-items: center
+    margin-bottom: 20px
+    svg
+        fill: $yellow
+    .label
+        color: $yellow
+        margin-left: 12px
+
+    .prefix
+        // flex: 0 0 48px
+        border-radius: 50%
+        padding-left: 6px
+        padding-top: 1px
+        width: 32px
+        height: 32px
+        padding: 2px 6px 0
+        transition: all .2s
+
+.button
+    border-radius: 10px
+    margin: 12px 0 0 0
+    width: 100%
+    img
+        padding-left: 18px
+    // padding: 4px 24px 4px 24px
+.pending
+    box-shadow: 0 0 0 2px $yellow inset
+    background-color: $yellow_dark
+    .prefix
+        box-shadow: 0 0 0 2px $yellow inset
+    svg
+        fill: $yellow !important
+    .label
+        color: $yellow
+    button
+        display: none
+
+.rejected
+    box-shadow: 0 0 0 2px $pink inset
+    background-color: $pink_dark
+    .prefix
+        box-shadow: 0 0 0 2px $pink inset
+    svg
+        fill: $pink !important
+    .label
+        color: $pink
+    button
+        background-color: $pink
+
+.approved
+    box-shadow: 0 0 0 2px $primary inset
+    background-color: $primary-deep-dark
+    .prefix
+        box-shadow: 0 0 0 2px $primary inset
+    svg
+        fill: $primary !important
+    .label
+        color: $primary
+    button
+        background-color: $primary
+
+.feeupdate
+    box-shadow: 0 0 0 2px $yellow inset
+    background-color: $yellow_dark
+    .prefix
+        // box-shadow: 0 0 0 2px $yellow inset
+    svg
+        fill: $yellow !important
+    .label
+        color: $yellow
+        margin-top: 5px
+    button
+        border-radius: 12px
+        .btn
+            background-color: $primary
+.actions
+    justify-content: space-around
+    +m
+        flex-direction: column
+        div,button
+            margin-bottom: 10px

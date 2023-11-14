@@ -1,0 +1,313 @@
+@import ../../styles/helpers
+
+$spacing: 12px
+
+.section
+  padding: 96px 0
+  +x
+    padding: 80px 0
+  +m
+    padding: 64px 0
+
+.container
+  display: flex
+  align-items: flex-start
+  +t
+    display: block
+
+.bg
+  position: relative
+  flex-grow: 1
+  margin-right: 96px
+  +x
+    margin-right: 64px
+  +d
+    margin-right: 32px
+  +t
+    margin: 0 0 32px
+
+.details
+  display: flex
+  flex-direction: column
+  flex-shrink: 0
+  width: 384px
+  +d
+    width: 336px
+  +t
+    width: 100%
+
+.preview
+  position: relative
+
+  img
+    width: 100%
+    border-radius: 16px
+
+.categories
+  position: absolute
+  top: 24px
+  left: 24px
+  display: flex
+  flex-wrap: wrap
+  margin: -8px 0 0 -8px
+
+.category
+  margin: 8px 0 0 8px
+
+.options
+  position: absolute
+  top: auto
+  left: 50%
+  bottom: 24px
+  transform: translateX(-50%)
+
+.title
+  margin-bottom: 8px
+
+.menuBtn
+  float: right
+
+.cost
+  display: flex
+  align-items: center
+  margin-bottom: 40px
+
+.price
+  +dm-sans
+  font-size: 16px
+  line-height: 30px
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.counter
+  +button-1
+  color: $neutrals4
+
+.info
+  margin-bottom: 40px
+  +body-2
+  color: $neutrals4
+
+  a
+    text-decoration: underline
+    font-weight: 500
+    color: $neutrals2
+    +dark
+      color: $neutrals8
+
+    &:hover
+      text-decoration: none
+
+.nav
+  display: flex
+  margin-bottom: 32px
+  padding: 6px
+  border-radius: 20px
+  box-shadow: inset 0 0 0 2px $neutrals6
+  +dark
+    box-shadow: inset 0 0 0 2px $neutrals3
+
+.link
+  padding: 6px 12px
+  border-radius: 14px
+  background: none
+  +button-2
+  color: $neutrals4
+  transition: all .2s
+
+  &:hover
+    color: $neutrals3
+    +dark
+      color: $neutrals6
+
+  &.active
+    background: $neutrals3
+    color: $neutrals8
+    +dark
+      background: $neutrals8
+      color: $neutrals2
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.users
+  margin-bottom: auto
+
+.control
+  margin-top: 40px
+  +m
+    margin-top: 32px
+
+.inner
+  color: $neutrals4
+
+.head
+  display: flex
+  align-items: center
+  gap: $spacing
+  margin-bottom: $spacing * 1.5
+
+.imgWrapper
+  max-width: 48px
+  width: 100%
+  flex-shrink: 1
+  height: 48px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $blue-button-color
+  overflow: hidden
+
+  img
+    max-width: 100%
+
+.mutt
+  +body-2
+  font-weight: 600
+
+.bids
+  +body-1
+  color: $neutrals8
+  font-weight: 600
+  margin: 0
+
+.row
+  p
+    gap: $spacing
+    margin-bottom: 0.5em
+
+    span
+      margin-left: $spacing
+      text-transform: uppercase
+
+  &:last-child
+    margin-bottom: $spacing * 1.5
+
+.accent
+  +caption-1
+  font-weight: 600
+  color: $neutrals8
+
+.subAccent
+  +body-2
+  font-weight: 600
+  color: $neutrals8
+  margin-left: 0.5em
+
+.divider
+  margin: $spacing * 2 0
+  width: 100%
+  height: 1px
+  display: block
+  background-color: $neutrals4
+
+.bodyRow
+  margin: $spacing * 2.5 0
+
+.spaceContainer
+  margin-top: $spacing * 2.5
+
+.timer
+  display: flex
+  gap: 10%
+
+.unit
+  min-width: 50px
+  display: flex
+  flex-direction: column
+
+  p
+    +body-1
+    color: $neutrals8
+    font-weight: 600
+
+.btn
+  width: 100%
+
+.order
+  display: flex
+  gap: $spacing
+
+  &Price, &Button
+    flex: 1
+
+.orderPrice input::placeholder
+  text-align: right
+
+.userBids
+  +body-1
+  font-weight: 600
+  color: $neutrals8
+
+  span
+    text-transform: uppercase
+    margin-right: $spacing
+
+.ownerControls
+  display: flex
+  gap: $spacing
+  justify-content: space-between
+
+  .button
+    flex: 1
+    padding: unset
+
+.trophy
+  background-color: $blue-button-color
+  border-radius: 8px
+  padding: $spacing
+  color: $neutrals8
+  font-weight: 600
+
+  .imgWrapper
+    background-color: $neutrals8
+
+.error
+  +error
+
+.loader
+  height: 100px
+  width: 100px
+  margin: 20px auto
+
+
+.nftItems
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  width: 384px
+  gap: 16px 0
+
+  .nftItem
+    width: 50%
+    overflow: hidden
+    max-width: 50%
+    border: none
+    margin: 0 !important
+    padding: 0
+    align-items: start
+    +m
+      width: 100%
+      max-width: 100%
+
+.stepperWrapper
+  width: 100%
+  display: flex
+  justify-content: center
+  margin-top: 40px
+
+.stepperContainer
+  background: #161921
+  border-radius: 16px
+  width: 1120px
+  padding: 20px
+
+.modelRichText
+  max-width: 600px
+
+.unlockableBtn
+  margin: 0 10px
+  height: 40px
+  padding: 0 12px

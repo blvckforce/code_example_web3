@@ -1,0 +1,59 @@
+@import ../../../styles/helpers
+
+.table-responsive
+    display: block
+    width: 100%
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar
+    border: 1px solid $neutrals4
+    box-sizing: border-box
+    border-radius: 8px
+    +dark
+        border-color: $navy_blue
+    
+table
+    text-align: left
+    thead
+        background: $neutrals6
+        height: 37px
+        +dark
+            background: $neutrals3
+    tr:not(:first-child)
+        border-top: 1px solid $neutrals4
+        +dark
+            border-color: $navy_blue
+    td,caption
+        padding: 20px
+    thead th
+        +caption-bold-1
+        padding: 10px 20px
+    td,caption,th
+        vertical-align: middle
+caption
+    +body-2
+    font-weight: bold
+    text-align: left
+    svg
+        transform: rotate(90deg)
+        margin-right: 15px
+
+svg
+    &.event
+        margin-right: 8px
+.item
+    display: flex
+    flex-direction: row
+    align-items: center
+    img
+        width: 38px
+        height: 38px
+        border-radius: 8px
+        margin-right: 10px
+    .details
+        display: flex
+        flex-direction: column
+.loader
+    height: 50px
+    width: 50px
+    margin: 0 auto

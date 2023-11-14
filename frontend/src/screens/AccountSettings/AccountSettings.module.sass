@@ -1,0 +1,235 @@
+@import ../../styles/helpers
+
+.section
+    padding: 0px
+    margin-top: 2rem
+.container
+    padding: 0px
+    margin: 0
+    max-width: 100%
+
+.top
+    display: flex
+    flex-direction: column
+    margin: 30px 10px
+    .selections
+        margin-top: 30px
+        .filter_button
+            margin-right: 5px
+            margin-bottom: 5px
+        svg
+            margin-right: 0px !important
+
+.filter_button
+    border-radius: 8px
+    height: 44px
+    background-color: $navy_blue_1
+    padding-top: 30px
+    padding-bottom: 30px
+    margin: 10px
+    width: 244px
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    margin-left: 20px
+    .row
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+
+.button-outline
+    outline-color: $neutrals3
+    +dark
+        outline-color: $neutrals6
+
+.link
+    flex-shrink: 0
+    margin: 0 6px
+    padding: 6px 12px
+    border-radius: 14px
+    background: none
+    +button-2
+    color: $neutrals4
+    transition: all .2s
+    +m
+        margin: 0
+    &:hover
+        color: $neutrals3
+        +dark
+            color: $neutrals6
+    &.active
+        background: $neutrals3
+        color: $neutrals8
+        +dark
+            background: $neutrals8
+            color: $neutrals2
+    &:not(:last-child)
+        +m
+            margin-right: 12px
+
+.row
+    display: flex
+    // flex-direction: row
+    +t
+        display: block
+
+.label
+    font-size: 6px
+    flex-grow: 3
+    align-items: center
+    // font-family: Inter
+    // font-weight: 200
+    padding-top: 10px
+
+.nav
+    display: flex
+    flex-direction: column
+    +t
+        flex-direction: row
+        flex-wrap: wrap
+        margin-bottom: 20px
+
+.button_outline
+    border: 1px solid $primary
+    color: $neutrals4
+
+.wrapper
+    flex-grow: 1
+    margin-bottom: 80px
+    +d
+        margin-bottom: 50px
+    +m
+        margin-bottom: 40px
+    +t
+        padding-left: 0
+
+.filters
+    flex-shrink: 0
+    width: 326px
+    background-color: $neutrals7
+    border-right: 1px solid $neutrals6
+    +dark
+        background-color: $neutrals1_6
+        border-right: 1px solid $neutrals3
+    +t
+        width: 100%
+        margin-bottom: 12px
+
+    .head
+        border-bottom: 1px solid $neutrals6
+        padding: 20px
+        font-size: 14px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        color: $neutrals4
+        +dark
+            color: $neutrals8
+            border-color: $neutrals3
+
+        .title
+            font-weight: bold
+            svg
+                margin-right: 20px
+                fill: $neutrals4
+                stroke: $neutrals4 !important
+        svg
+            fill: $neutrals4
+            transition: fill .2s
+            stroke: $neutrals4
+
+    .body
+        color: $neutrals4
+        svg
+            fill: $neutrals4
+
+    .status,.category,.tags
+        display: grid
+        grid-gap: 10px
+        grid-column: 1
+        grid-template-columns: 1fr 1fr
+        button
+            width: 100%
+    .tags
+        padding: 20px 18px
+        background: $neutrals3
+        +dark
+            background: none
+        button
+            width: 90%
+            margin: 0px
+            padding: 0
+            justify-content: center
+            svg
+                fill: $neutrals8
+                margin: 0 10px
+
+    .accordion
+        &.dropdown
+            z-index: 20
+
+    .price
+        .range
+            display: flex
+            flex-direction: row
+            flex-wrap: no-wrap
+            overflow: auto
+            align-items: center
+            margin: 20px 0
+            justify-content: justify-evenly
+
+            .bridge
+                padding: 0 14px
+                color: $neutrals4
+    button
+        height: 34px
+
+.no_filter
+    .body
+        padding-top: 30px
+        +m
+            padding-top: 0px
+
+.label
+    text-align: start
+    margin-bottom: 12px
+    +body-2
+    color: $neutrals8
+    text-transform: none
+
+.reset
+    color: $primary
+    margin-left: 20px
+    +caption-bold-1
+
+.minimize
+    .filters
+        background-color: transparent
+        width: 84px
+        .head
+            border-bottom: none
+            justify-content: center
+
+            .title
+                display: none
+
+            .toggle
+                svg
+                    transform: rotate(180deg)
+        .body
+            display: none
+
+        +t
+            border-right: none
+    .card
+        +rmin(1339)
+            flex: 0 0 calc(25% - 32px)
+            max-width: calc(25% - 32px)
+.icon
+    font-family: Inter
+    font-weight: 600
+    +body-bold-2
+    color: $neutrals8
+    text-align: start
+    padding-right: 8px

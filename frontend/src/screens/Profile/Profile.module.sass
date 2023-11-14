@@ -1,0 +1,50 @@
+@import ../../styles/helpers
+
+.profile
+    .container
+        z-index: 3
+        padding: 20px
+        +m
+            justify-content: center
+
+.text
+    +body-2
+    +m
+        font-size: 12px
+
+.body
+    position: relative
+    z-index: 3
+    padding: 60px 0
+    +t
+        padding-top: 0
+    +m
+        padding: 0 0 64px
+    .container
+        display: flex
+        align-items: flex-start
+        +t
+            display: block
+
+.user
+    width: 100%
+
+.wrapper
+    width: 100%
+
+.following,
+.followers
+    padding-top: 16px
+    +m
+        padding-top: 0
+.loader
+    margin: 32px auto 32px
+.filters
+    background-color: transparent
+    border: none
+    +dark
+        border: none
+        background-color: transparent
+    .header
+        // visibility: hidden
+        display: none

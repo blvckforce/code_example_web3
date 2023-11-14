@@ -1,0 +1,70 @@
+@import ../../../styles/helpers
+
+.properties
+    background: neutrals2
+
+.title
+    margin-bottom: 32px
+
+.text
+    +caption-2
+    color: $neutrals4
+    margin-bottom: 32px
+
+.button
+    width: 100%
+
+.list
+    border-bottom: 1px solid $navy_blue
+    margin-bottom: 32px
+.row
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 15px
+    > div
+        margin: 0px 10px
+    
+.head
+    flex-grow: 1
+    align-items: center
+    +body-bold-1
+svg
+    fill: $neutrals4
+    +dark
+        fill: $neutrals8
+.close
+    width: 48px
+    height: 48px
+    border: 2px solid $navy_blue
+    box-sizing: border-box
+    border-radius: 48px
+    flex: none
+    order: 0
+    flex-grow: 0
+    margin: 0px 10px
+    padding: 12px
+    &:hover
+        transform: rotate(180deg)
+        transition: all .4s
+
+.input
+    div>input
+        +dark
+            background: $neutrals1
+            border-color: $navy_blue
+            &:hover
+                border-color: $neutrals4
+
+.more
+    margin: 32px 20px
+
+.note
+    text-align: center
+    color: $neutrals4
+    +caption-bold-1
+    margin-bottom: 10px
+    svg
+        padding: 10px
+        border: 1px solid $neutrals4
+        border-radius: 40px

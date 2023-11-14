@@ -1,0 +1,256 @@
+@import ../../../styles/helpers
+
+.section
+    margin-top: 2rem
+    margin-bottom: 3rem
+    width: 100%
+    max-width: 872px
+    //+rmin($t)
+    //    padding-right: 18%
+    //    padding-left: 18%
+    .head
+        width: 100%
+        .title
+            // +poppins
+            text-align: center
+            margin-bottom: 8px
+        .sub_title
+            color: $neutrals5
+            width: 100%
+            margin-bottom: 8%
+.container
+    padding: 32px 32px 16px
+    margin-bottom: 5%
+    border-radius: 8px
+    box-shadow: 0 0 0 1px $neutrals2_5 inset
+    +m
+        padding: 16px 16px 8px
+
+.row
+    .field
+        width: 70%
+        +m
+            width: 100%
+.center
+    justify-content: center
+
+.title
+    font-weight: 500
+.subtitle
+    margin-top: 5px
+    color: $neutrals4
+    font-size: 14px
+
+.dragerText
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    span
+        margin-right: 16px
+
+.draggerDescription
+    margin-top: 16px
+
+.wallet
+    margin-top: 10px
+    align-items: end
+    +m
+        flex-direction: column
+        align-items: center
+    .confirm
+        width: min-content
+        padding: 3% 6.5% 3% 7%
+        background: $neutrals3
+        &:hover
+            background: $neutrals4
+.confirm
+    width: 35%
+
+.field
+    margin-top: 30px
+    width: 100%
+
+.readmore
+    margin-top: 3%
+    padding: 3%
+    text-align: center
+    border-top: 1px solid $neutrals3
+    .more
+        color: $primary
+.gap
+    margin-right: 30px
+.work
+    margin-top: 5%
+    .body
+        position: relative
+        display: flex
+        align-items: flex-end
+        height: 176px
+        padding: 32px 0
+        margin-top: 50px
+        border-radius: 24px
+        background-color: $neutrals5
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+        overflow: hidden
+        +dark
+            background-color: $neutrals1_5
+        +t
+            height: 260px
+            padding-bottom: 64px
+        +m
+            height: 230px
+            padding-bottom: 56px
+        .container
+            display: flex
+            justify-content: flex-end
+        &.active
+            .btns
+                opacity: 0
+            .file
+                opacity: 1
+                visibility: visible
+.btns
+    transition: opacity .2s
+    .button
+        box-shadow: 0 0 0 2px $neutrals4 inset
+        color: $neutrals8
+        +m
+            flex-grow: 1
+            padding: 0 10px
+        svg
+            fill: $neutrals8
+        &:hover
+            box-shadow: 0 0 0 2px $primary inset
+        &:not(:last-child)
+            margin-right: 16px
+.file
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    color: $neutrals8
+    opacity: 0
+    visibility: hidden
+    transition: all .2s
+    +m
+        align-items: flex-start
+        padding-top: 40px
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+    &:before
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $neutrals2
+    &:after
+        top: 2px
+        left: 2px
+        right: 2px
+        bottom: 2px
+        border: 2px dashed $neutrals3
+        border-radius: 12px
+    input
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 3
+        //font-size: 1400px
+        width: 100%
+        height: 100%
+        opacity: 0
+    svg
+        margin-bottom: 24px
+        fill: $neutrals8
+        +m
+            width: 24px
+            height: 24px
+            margin-bottom: 12px
+    .button
+        position: absolute
+        right: 16px
+        bottom: 16px
+        z-index: 4
+        +t
+            bottom: 48px
+        +m
+            right: 50%
+            transform: translateX(50%)
+.wrap
+    position: relative
+    z-index: 2
+    color: $neutrals4
+    svg
+        fill: $neutrals4
+.twitter
+    svg
+        fill: $neutrals8
+
+.twitterVerified
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+
+.file_previews
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    overflow: auto
+    margin: 10px 5px 30px 5px
+
+    img
+        height: 240px
+        border-radius: 16px
+        flex-shrink: 1
+        margin-right: 8px
+        margin-left: 8px
+        &:last-child()
+            margin-right: 0
+        &:first-child
+            margin-left: 0
+
+.agent
+    display: flex
+    justify-content: space-between
+    padding: 10px
+    margin-bottom: 30px
+    align-items: center
+    [class^="row"]
+        align-items: center
+        +m
+            margin-right: 10px
+    .name
+        color: $neutrals4
+        +dark
+            color: $neutrals8
+        +m
+            display: inline-block
+            +ellipsis
+        +s
+            max-width: 110px
+
+    .agent_name_block
+        align-items: start
+        flex-direction: column
+
+        &>span:first-child
+            color: $neutrals1
+            +dark
+                color: $neutrals4
+    img
+        width: 50px
+        border-radius: 8px
+        margin-right: 10px
+
+.block
+    display: block

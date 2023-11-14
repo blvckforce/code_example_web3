@@ -1,0 +1,101 @@
+@import ../../styles/helpers
+
+.checkout
+    margin-top: 20px
+
+.title
+    margin-bottom: 32px
+
+.info
+    margin-bottom: 32px
+    +body-2
+    strong
+        font-weight: 500
+
+.stage
+    margin-bottom: 16px
+    +body-bold-1
+
+.row
+    display: flex
+    padding-top: 12px
+    &:first-child
+        padding: 0 0 12px
+        border-bottom: 1px solid $neutrals6
+        font-weight: 500
+        +dark
+            border-color: $neutrals3
+
+.col
+    +body-2
+    &:first-child
+        color: $neutrals4
+    &:nth-child(2)
+        margin-left: auto
+        padding-left: 16px
+        font-weight: 500
+
+.btns
+    margin-top: 32px
+
+.button
+    width: 100%
+    &:not(:last-child)
+        margin-bottom: 8px
+
+
+.bidInput
+    background: transparent
+    color: $neutrals8
+    margin-top: 4px
+    -moz-appearance: textfield
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none
+        margin: 0
+
+    &::placeholder
+        color: $neutrals4
+.currency
+    font-weight: 700
+    white-space: nowrap
+    text-transform: uppercase
+
+
+    &:before
+        content: "logo"
+        display: inline-block
+        width: 32px
+        background-image: url('../../styles/assets/icon-light.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        color: transparent
+
+.attention
+    display: flex
+    align-items: center
+    margin-top: 32px
+    padding: 24px
+    border-radius: 8px
+    background: rgba($pink, .08)
+    color: $pink
+    +m
+        align-items: stretch
+
+    .preview
+        flex-shrink: 0
+        width: 32px
+        margin-right: 16px
+        svg
+            fill: $pink
+
+.details
+    flex-grow: 1
+
+.subtitle
+    +body-bold-2
+
+.text
+    +caption-2

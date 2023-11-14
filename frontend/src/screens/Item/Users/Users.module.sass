@@ -1,0 +1,57 @@
+@import ../../../styles/helpers
+
+$avatar-size: 48px
+$avatar-space: 16px
+
+.item
+  display: flex
+  align-items: center
+  padding-bottom: 16px
+  border-bottom: 1px solid $neutrals6
+  +dark
+    border-color: $neutrals3
+
+  &:not(:last-child)
+    margin-bottom: 16px
+
+.avatar
+  position: relative
+  flex-shrink: 0
+  width: $avatar-size
+  height: $avatar-size
+  margin-right: $avatar-space
+
+  & > img
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    object-fit: cover
+
+.reward
+  position: absolute
+  right: -5px
+  bottom: -5px
+
+  img
+    max-width: 25px
+
+.details
+  flex-grow: 1
+  max-width: calc(100% - #{$avatar-size} - #{$avatar-space})
+
+.position
+  color: $neutrals4
+  min-height: 24px
+
+.name
+  font-weight: 500
+  min-height: 24px
+  max-height: 1em
+  text-overflow: ellipsis
+  overflow: hidden
+
+.circle
+  width: $avatar-size
+  height: $avatar-size
+  border-radius: 50%
+  background-color: #404350

@@ -1,0 +1,85 @@
+@import ../../../styles/helpers
+
+.body
+    position: relative
+    z-index: 3
+    padding: 60px 0
+    +t
+        padding-top: 0
+    +m
+        padding: 0 0 64px
+    .container
+        display: flex
+        align-items: flex-start
+        +t
+            display: block
+
+.user
+    width: 100%
+
+.wrapper
+    width: 100%
+
+.nav
+    display: flex
+    margin: 0 -6px 32px
+    justify-content: center
+    +m
+        margin: 0 -32px 32px
+        justify-content: flex-start
+        overflow: auto
+        overflow-x: auto
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 32px
+            height: 1px
+
+.link
+    flex-shrink: 0
+    margin: 0 6px
+    padding: 6px 12px
+    border-radius: 14px
+    background: none
+    +button-2
+    color: $neutrals4
+    transition: all .2s
+    +m
+        margin: 0
+    &:hover
+        color: $neutrals3
+        +dark
+            color: $neutrals6
+    &.active
+        background: $neutrals3
+        color: $neutrals8
+        +dark
+            background: $neutrals8
+            color: $neutrals2
+    &:not(:last-child)
+        +m
+            margin-right: 12px
+
+.following,
+.followers
+    padding-top: 16px
+    +m
+        padding-top: 0
+.loader
+    margin: 32px auto 32px
+.filters
+    background-color: transparent
+    border: none
+    margin-top: 3.5%
+    +dark
+        border: none
+        background-color: transparent
+    .header
+        visibility: hidden
+        display: none

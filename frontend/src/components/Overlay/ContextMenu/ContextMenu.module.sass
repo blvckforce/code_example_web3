@@ -1,0 +1,27 @@
+@import ../../../styles/helpers
+
+.box
+    position: absolute
+    top: 0px
+    left: 140px
+    //bottom: calc(100% + 8px)
+    //margin-top: 3.5%
+    //margin-left: 5%
+    z-index: 2
+    width: 120px
+    transform: translateX(-50%)
+    padding: 32px 16px
+    background: $neutrals8
+    border: 1px solid $neutrals6
+    box-shadow: 0px 32px 32px -8px rgba(31, 47, 70, 0.12)
+    border-radius: 12px
+    text-align: center
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    +dark
+        background: $neutrals1_6
+        border-color: $navy_blue_1
+    &.active
+        visibility: visible
+        opacity: 1

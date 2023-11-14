@@ -1,0 +1,304 @@
+@import ../../../../styles/helpers
+
+.item
+  flex: 0 0 calc(20% - 32px)
+  width: calc(20% - 32px)
+  padding: 20px
+  margin-top: 26px
+  border-radius: 16px
+  background: $neutrals8
+  transition: box-shadow .2s
+  margin-left: 30px
+  +d
+    flex: 0 0 calc(25% - 32px)
+    width: calc(25% - 32px)
+    padding: 20px
+  +t
+    flex: 0 0 calc(33.33% - 32px)
+    width: calc(33.33% - 32px)
+    margin-left: 30px
+    padding: 35px
+  +m
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin-left: 30px
+    padding: 35px
+  +a
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin-left: 20px
+    padding: 15px
+  +s
+    width: 100%
+    margin-left: 30px
+    margin-right: 0px
+    padding: 60px
+  +dark
+    background: $neutrals1_6
+
+  &:hover
+    box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+
+.footer
+  margin-top: 24px
+  padding-top: 24px
+  border-top: 1px solid $neutrals6
+  position: relative
+  +dark
+    border-color: $neutrals3
+
+.rating
+  display: flex
+  align-items: center
+  height: 24px
+  margin-right: auto
+  padding: 0 8px
+  border-radius: 12px
+  +caption-bold-2
+  color: $neutrals8
+
+.control
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: stretch
+
+.button
+  svg
+    fill: $neutrals5
+    transition: fill .2s
+
+  &:hover
+    svg
+      fill: $primary
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.body
+  text-align: center
+
+.avatar
+  position: relative
+  width: 64px
+  margin: 0 auto 16px
+  transition: width .2s
+
+  & > img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 50%
+
+  &:before
+    content: ""
+    display: block
+    padding-bottom: 100%
+
+.reward
+  position: absolute
+  right: -4px
+  bottom: -4px
+
+.name
+  margin-top: 12px
+  margin-bottom: 20px
+  font-weight: 500
+
+.price
+  +caption-2
+  color: $neutrals4
+
+  span
+    font-weight: 600
+    color: $neutrals2
+    +dark
+      color: $primary
+
+.icon
+  border-radius: 8px
+  padding: 0
+  padding-top: 5px
+  padding-bottom: 5px
+  height: min-content
+
+  svg
+    stroke: $neutrals2
+    width: 16px
+    margin: 0 10px !important
+
+  &.active
+    svg
+      &:first-child
+        opacity: 0
+
+      &:nth-child(2)
+        opacity: 1
+
+  &:hover
+    background: $navy_blue
+    box-shadow: 0 0 0 0px $primary inset
+    color: $neutrals8
+
+    svg
+      fill: $neutrals8
+
+  +dark
+    box-shadow: 0 0 0 2px $neutrals3 inset
+    svg
+      stroke: $neutrals8
+    &:hover
+      box-shadow: 0 0 0 0px $neutrals4 inset
+
+.icons
+  border-radius: 8px
+  padding: 0
+  padding-top: 8px
+  padding-bottom: 8px
+  padding-right: 8px
+  padding-left: 8px
+  height: min-content
+  position: relative
+  margin-left: 10px
+
+  svg
+    transition: all .2s
+
+    &:nth-child(2)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+
+  &.active
+    svg
+      &:first-child
+        opacity: 0
+
+      &:nth-child(2)
+        opacity: 1
+
+  &:hover
+    background: $navy_blue
+    box-shadow: 0 0 0 0px $primary inset
+    color: $neutrals8
+
+    svg
+      fill: $neutrals8
+
+  +dark
+    box-shadow: 0 0 0 2px $neutrals3 inset
+    &:hover
+      box-shadow: 0 0 0 0px $neutrals4 inset
+
+.box
+  width: 340px
+  padding: 12px 16px
+  border-radius: 12px
+  text-align: center
+  transform: revert
+  top: 110%
+  left: auto
+  right: auto
+  +t
+    margin-left: 8%
+  +m
+    margin-left: 15%
+  +a
+    position: fixed
+    margin-left: 0
+    width: 50%
+    transform: translateX(0)
+    top: 50%
+    left: 25%
+    z-index: 20
+    opacity: 1
+
+.range
+  width: 300px
+  padding: 8px 8px 18px 8px
+
+  .label
+    text-align: start
+
+  .rangeValues
+    color: $neutrals5
+
+.menu
+  display: flex
+  justify-content: center
+  align-items: stretch
+  flex-direction: column
+
+.label
+  +caption-1
+  margin-left: 8px
+  margin-bottom: 16px
+
+.slide
+  +hairline-2
+  color: $neutrals5
+  margin-top: 18px
+
+.limit
+  display: flex
+  justify-content: space-between
+  margin-top: 5px
+
+  span
+    color: $neutrals2
+    +body-bold-2
+
+.current_value
+  background: $neutrals1
+  border-radius: 8px
+  padding: 4px 8px
+
+.button
+  border-radius: 8px
+  background: $pink
+
+  .delete
+    margin-right: 12px
+
+.slideContainer
+  width: 100%
+  text-align: left
+
+.slider
+  width: 100%
+  margin-top: 10px
+//-webkit-appearance: none
+//appearance: none
+//height: 8px
+//border-radius: 14px
+
+//&:active
+//  background: $primary
+//
+//&::-ms-tooltip
+//  display: block
+//
+//&::-webkit-slider-runnable-track
+//  background: $primary
+//
+//&::-webkit-slider-thumb
+//  -webkit-appearance: none
+//  appearance: none
+//  width: 25px
+//  height: 25px
+//  border-radius: 50px
+//  background: $primary
+//  box-shadow: 0 0 0 3px $neutrals7 inset
+//  cursor: pointer
+//
+//&::-moz-range-thumb
+//  width: 25px
+//  height: 25px
+//  background: $primary
+//  cursor: pointer
+//  box-shadow: 0 0 0 3px $neutrals7 inset

@@ -1,0 +1,105 @@
+@import "/src/styles/helpers";
+
+.root {
+  max-width: 560px;
+}
+
+.body {
+  color: $neutrals4;
+}
+
+.text {
+  b {
+    color: $neutrals8;
+  }
+}
+
+.decimals {
+  color: $neutrals4;
+  border-left: 2px solid $neutrals2;
+  padding-left: 10px;
+  white-space: pre;
+}
+
+.currency {
+  text-transform: uppercase;
+}
+
+.price {
+  color: $neutrals4;
+
+  label {
+    @include invisible();
+    display: block;
+    @include m() {
+      display: none;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  @include m() {
+    flex-direction: column;
+  }
+}
+
+.dropdown {
+  width: 30%;
+  @include m() {
+    width: 100%;
+  }
+
+  & label {
+    white-space: pre;
+  }
+}
+
+.input {
+  width: 70%;
+  @include m() {
+    width: 100%;
+  }
+}
+
+.errors {
+  @include error();
+  font-size: inherit;
+  margin: unset;
+}
+
+.subRow {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance {
+  min-height: 24px;
+
+  & > span {
+    animation: show 0.5s both;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.footer {
+  gap: 20px;
+  @include body-bold-2();
+}
+
+.wait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader {
+  height: 40px;
+  width: 40px;
+}

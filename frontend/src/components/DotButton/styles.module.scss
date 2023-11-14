@@ -1,0 +1,21 @@
+@import "/src/styles/helpers";
+
+.btn {
+  background-color: $navy_blue_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  &:focus-visible {
+    @include focus-box-shadow()
+  }
+}
+
+.dot {
+  display: inline-block;
+  background-color: $white;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+}

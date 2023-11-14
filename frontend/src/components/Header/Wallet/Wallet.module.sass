@@ -1,0 +1,173 @@
+@import ../../../styles/helpers
+
+.wallet
+    position: relative
+    +m
+        position: static
+
+.head
+    position: relative
+    display: flex
+    align-items: center
+    width: 40px
+    height: 40px
+    border-radius: 20px
+    box-shadow: inset 0 0 0 2px $neutrals3
+    +button-2
+    background: $neutrals3
+    cursor: pointer
+    transition: box-shadow .2s
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+.avatar
+    margin: 0 auto
+    width: 24px
+    height: 24px
+    svg
+        fill: $neutrals8
+
+.currency
+    color: $green
+
+.body
+    position: absolute
+    z-index: 4
+    top: calc(100% + 34px)
+    width: 359px
+    margin-left: -310px
+    padding: 20px
+    border-radius: 24px
+    background: $neutrals8
+    opacity: 0
+    transform: scale(.9)
+    transform-origin: 50% 50px
+    will-change: transform
+    animation: showUser .4s forwards
+    background: $neutrals6
+    +m
+        left: 16px
+        right: 16px
+        top: calc(100% + 16px)
+        width: auto
+        margin: 0
+    &:before
+        content: ""
+        position: absolute
+        left: 92%
+        bottom: 100%
+        width: 58px
+        height: 13px
+        transform: translateX(-50%)
+        border-top: 1px solid $primary
+        +m
+            display: none
+    +dark
+        background: $neutrals1_5
+
+@keyframes showUser
+    0%
+        opacity: 0
+        transform: scale(.9)
+    100%
+        opacity: 1
+        transform: scale(1)
+
+.number
+    font-weight: 500
+    color: $neutrals4
+
+.details
+    text-align: center
+    width: 100%
+    font-size: 14px
+    font-weight: 700
+    padding: 10px
+    line-height: 16px
+    .info
+        margin-bottom: 10px
+
+.wrap
+    border: 1px solid $neutrals8
+    box-sizing: border-box
+    border-radius: 10px
+    margin-bottom: 7px
+    box-shadow: 0px 24px 24px -8px rgba(15, 15, 15, 0.2)
+    +dark
+        border: 1px solid $neutrals3
+
+.line
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+
+.preview
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    margin-right: 16px
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+
+.info
+    +caption-2
+    color: $neutrals4
+
+.price
+    +body-bold-1
+
+.button
+    width: 100%
+    height: 45px
+    padding: 0 10px
+    font-size: 14px
+    background: $primary
+    border-radius: 0 0 10px 10px
+
+.menu
+    border: 1px solid $neutrals8
+    box-sizing: border-box
+    border-radius: 10px
+    margin-top: 20px
+    +dark
+        border-color: $neutrals3
+
+.item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px
+    +button-2
+    color: $neutrals4
+    font-weight: bold
+    font-size: 16px
+    line-height: 16px
+    &:not(:last-child)
+        border-bottom: 1px solid $neutrals6
+        +dark
+            border-color: $neutrals3
+    &[href]
+        &:hover
+            color: $primary
+            svg
+                fill: $primary
+    +dark
+        color: $white
+
+.icon
+    flex-shrink: 0
+    min-width: 20px
+    margin-right: auto
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+
+.text
+    margin-right: auto
+
+    .mute
+        font-weight: normal
+        color: $neutrals4
+        font-size: 14px
+        line-height: 24px

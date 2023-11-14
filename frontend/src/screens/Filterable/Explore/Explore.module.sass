@@ -1,0 +1,32 @@
+@import ../../../styles/helpers
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: -32px -16px 0
+    +m
+        display: block
+        margin: 0
+
+.card
+    flex: 0 0 calc(33.333% - 32px)
+    max-width: calc(33.333% - 32px)
+    margin: 32px 16px 0
+    padding: 12px
+    +t
+        flex: 0 0 calc(50% - 32px)
+        max-width: calc(50% - 32px)
+    +m
+        max-width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 32px
+
+.btns
+    margin-top: 32px
+    text-align: center
+
+.loader
+    height: 50px
+    width: 50px
+    margin: 20px auto

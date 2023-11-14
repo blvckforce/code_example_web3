@@ -1,0 +1,118 @@
+@import ../../styles/helpers
+
+.head
+    position: relative
+    display: flex
+    align-items: flex-end
+    height: 326px
+    padding: 32px 0
+    margin-top: 50px
+    border-radius: 24px
+    background-color: $neutrals5
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    overflow: hidden
+    +dark
+        background-color: $neutrals1_6
+    +t
+        height: 260px
+        padding-bottom: 64px
+    +m
+        height: 230px
+        padding-bottom: 56px
+    .container
+        display: flex
+        justify-content: flex-end
+    &.active
+        .btns
+            opacity: 0
+        .file
+            opacity: 1
+            visibility: visible
+    &.compact
+        margin-top: 0
+
+.btns
+    transition: opacity .2s
+    .button
+        box-shadow: 0 0 0 2px $neutrals4 inset
+        color: $neutrals8
+        +m
+            flex-grow: 1
+            padding: 0 10px
+        svg
+            fill: $neutrals8
+        &:hover
+            box-shadow: 0 0 0 2px $primary inset
+        &:not(:last-child)
+            margin-right: 16px
+.container
+    z-index: 3
+    padding: 20px
+    +m
+        justify-content: center
+.file
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    color: $neutrals8
+    opacity: 0
+    visibility: hidden
+    transition: all .2s
+    +m
+        align-items: flex-start
+        padding-top: 40px
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+    &:before
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba($neutrals1, .6)
+    &:after
+        top: 8px
+        left: 8px
+        right: 8px
+        bottom: 8px
+        border: 2px dashed $neutrals6
+        border-radius: 12px
+    input
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 3
+        font-size: 1400px
+        opacity: 0
+        width: 100%
+        height: 100%
+    svg
+        margin-bottom: 24px
+        fill: $neutrals8
+        +m
+            width: 24px
+            height: 24px
+            margin-bottom: 12px
+    .button
+        position: absolute
+        right: 16px
+        bottom: 16px
+        z-index: 4
+        +t
+            bottom: 48px
+        +m
+            right: 50%
+            transform: translateX(50%)
+
+.wrap
+    position: relative
+    z-index: 2

@@ -1,0 +1,28 @@
+@import "src/styles/helpers";
+
+.outer {
+  //max-width: 550px;
+}
+
+.body {
+  color: $neutrals4;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  min-width: 100%;
+  transition: min-width 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  background-color: $blue;
+
+  img {
+    margin-right: 1ch;
+  }
+}
+
+.copy {
+  min-width: 10%;
+  background-color: $green;
+}

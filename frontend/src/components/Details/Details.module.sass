@@ -1,0 +1,260 @@
+@import ../../styles/helpers
+
+$line-spacing: 20px
+
+.user
+  padding: 0 28px
+  background: transparent
+  text-align: center
+  position: relative
+  margin-top: -58px
+  +dark
+    border-color: $neutrals3
+
+.avatar
+  position: relative
+  width: 102px
+  height: 102px
+  margin: 0 auto $line-spacing
+  border: 4px solid $neutrals8
+  border-radius: 72px
+  +dark
+    border-color: $neutrals1
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 50%
+
+  .status
+    position: absolute
+    bottom: 0
+    right: 0
+
+.name
+  margin-bottom: 4px
+  +body-bold-1
+
+.agent
+  margin: $line-spacing
+
+.title
+  margin: $line-spacing auto
+  word-break: break-word
+
+.code
+  display: inline-flex
+  align-items: center
+  background: $neutrals2
+  border-radius: 56px
+  padding: 10px 15px
+  height: 34px
+
+  input
+    background: transparent
+
+.number
+  +button-2
+  color: $neutrals8
+  +dark
+    color: $neutrals8
+
+.copy
+  margin-left: 8px
+
+  svg
+    fill: $primary
+    transition: fill .2s
+
+  &:hover
+    svg
+      fill: darken($primary, 10)
+
+.copied
+  margin-left: 20px
+  color: $neutrals1
+  +dark
+    color: $neutrals8
+
+  &.hide
+    display: none
+
+.control
+  display: block
+  position: relative
+  margin-bottom: 0
+  margin-top: $line-spacing
+
+.box
+  position: absolute
+  left: 50%
+  bottom: calc(100% + 8px)
+  z-index: 2
+  width: 220px
+  transform: translateX(-50%)
+  padding: 32px 16px
+  background: $neutrals8
+  border: 1px solid $neutrals6
+  box-shadow: 0 32px 32px -8px rgba(31, 47, 70, 0.12)
+  border-radius: 16px
+  text-align: center
+  visibility: hidden
+  opacity: 0
+  transition: all .2s
+  +dark
+    background: $neutrals2
+    border-color: $neutrals3
+
+  &.active
+    visibility: visible
+    opacity: 1
+
+.stage
+  margin-bottom: 24px
+  font-weight: 500
+
+.share, .menu
+  display: flex
+  justify-content: center
+
+.direction
+  span
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $neutrals6
+    transition: all .2s
+
+    svg
+      transition: fill .2s
+
+    &:hover
+      background: $primary
+
+      svg
+        fill: $neutrals8
+
+    +dark
+      background: $neutrals3
+      svg
+        fill: $neutrals8
+      &:hover
+        background: $primary
+
+        svg
+          fill: $neutrals8
+
+  &:not(:last-child)
+    margin-right: 24px
+
+.btns
+  display: flex
+  justify-content: center
+  align-items: center
+
+.button
+  span
+    &:nth-child(2)
+      display: none
+
+  &.active
+    svg
+      fill: $neutrals8
+
+    span
+      &:first-child
+        display: none
+
+      &:nth-child(2)
+        display: inline
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.socials
+  display: flex
+  justify-content: center
+
+.social
+  color: inherit
+  svg
+    fill: $neutrals4
+    transition: fill .2s
+
+  &:hover
+    svg
+      fill: $primary
+
+  &:not(:last-child)
+    margin-right: 24px
+
+.note
+  margin-top: 48px
+  padding-top: 48px
+  border-top: 1px solid $neutrals6
+  +caption-2
+  color: $neutrals4
+  +dark
+    border-color: $neutrals3
+
+.bio
+  +button-2
+  color: $neutrals4
+  line-height: 32px
+  margin: $line-spacing * 1.5 auto
+
+.social
+  margin-right: 10px
+
+  & :first-child
+    margin-right: 5px
+
+.context_menu
+  background: $neutrals8
+  width: 24%
+  display: block
+  margin-top: 22.5%
+  transform: translateX(100%)
+  padding: 12px 10px
+
+  .btn
+    margin-bottom: 12px
+
+  .label
+    color: $neutrals8
+
+  +dark
+    background: $neutrals1_6
+    border-color: $neutrals1_5
+
+  &.active
+    visibility: visible
+    opacity: 1
+
+  +m
+    width: 80%
+    bottom: 0
+    right: 10%
+    transform: none
+  +s
+    bottom: 10%
+
+.verify
+  border-color: $green
+  box-shadow: 0 0 0 2px $green inset
+
+  svg
+    fill: $green !important
+
+  +dark
+    border-color: $green
+    box-shadow: 0 0 0 2px $green inset
+    svg
+      fill: $green
+    &:hover
+      background: none

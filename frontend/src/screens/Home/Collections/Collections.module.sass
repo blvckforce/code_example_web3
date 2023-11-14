@@ -1,0 +1,109 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+
+
+.wrapper
+    position: relative
+    overflow: hidden
+    overflow: clip
+
+.item
+    border: 1px solid $neutrals3
+    border-radius: 16px
+    padding: 4px
+    text-align: center
+
+
+.title
+    margin-bottom: 60px
+    +d
+        margin-bottom: 54px
+    +m
+        margin-bottom: 32px
+        text-align: center
+
+.inner
+    margin: 0 -16px
+
+.gallery
+    //display: flex
+    //flex-wrap: wrap
+    //margin: -8px -4px 16px
+
+.preview
+    flex: 0 0 calc(33.333% - 8px)
+    width: calc(33.333% - 8px)
+    margin: 8px 4px 0
+    padding: 4px
+    &:first-child
+        flex: 0 0 calc(100% - 8px)
+        width: calc(100% - 8px)
+    &:nth-child(n+2)
+        display: none
+    img
+        width: 100%
+        height: 70%
+        border-radius: 9px
+
+.subtitle
+    margin-bottom: 8px
+    +body-bold-2
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+
+.tag
+    color: $neutrals4
+    margin-bottom: 16px
+
+.line
+    display: flex
+    align-items: center
+
+.user
+    display: flex
+    align-items: center
+    margin: 0 auto
+    margin-top: -20%
+    margin-bottom: 30px
+    color: $neutrals3
+    +dark
+        color: $neutrals6
+    span
+        font-weight: 500
+
+.avatar
+    flex-shrink: 0
+    width: 80px
+    height: 80px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 50%
+        border: 2px solid $neutrals8
+    .badge
+        width: 37px
+        height: 37px
+        border: none
+        margin-top: -15px
+
+
+.counter
+    flex-shrink: 0
+    border: 2px solid $primary
+    box-sizing: border-box
+    box-shadow: 0.5px 0.5px 8px 0.1px $primary
+    border-radius: 8px
+    color: $primary
+    margin-bottom: 16px
+    text-transform: lowercase
+    +dark
+        box-shadow: 0.5px 0.5px 8px 0.1px $primary
+        color: $primary

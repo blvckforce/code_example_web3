@@ -1,0 +1,238 @@
+@import ../../../styles/helpers
+
+.title
+  margin-bottom: 64px
+  +m
+    margin-bottom: 32px
+
+.top
+  position: relative
+  display: flex
+  justify-content: space-between
+  margin-bottom: 64px
+  +m
+    display: block
+    margin-bottom: 32px
+
+  .dropdown
+    width: 180px
+    +t
+      width: 260px
+    +m
+      width: 100%
+      margin-bottom: 12px
+
+.nav
+  //position: absolute
+  //top: 10px
+  //left: 50%
+  display: flex
+  flex-shrink: 0
+  justify-content: center
+  //transform: translateX(-50%)
+  +t
+    display: none
+
+.link
+  margin: 0 6px
+  padding: 6px 12px
+  border-radius: 90px
+  background: none
+  +button-3
+  color: $neutrals4
+  transition: all .2s
+  border: 2px solid $neutrals2
+  color: $neutrals3
+  padding: 8px 20px 8px 24px
+  +dark
+    color: $neutrals6
+
+  &:hover
+    color: $primary
+
+  &.active
+    background: $primary
+    color: $neutrals8
+    border-color: $primary
+  //&:nth-child(n+6)
+  //   display: none
+
+  .img, .icon
+    padding-left: 10px
+    font-size: 20px
+
+  .img
+    max-height: 1em
+
+  .tag
+    text-transform: uppercase
+    padding: 1px 10px
+    position: absolute
+    background: #EF466F
+    border-radius: 46px
+    bottom: 80%
+    display: flex
+    font-size: 12px
+    color: $white
+
+.ellipsis
+  padding: 8px 20px
+  width: 48px
+  height: 48px
+  border: 2px solid $neutrals3
+  box-sizing: border-box
+  border-radius: 90px
+  color: $neutrals4
+  font-weight: 700
+  margin: 0 6px
+
+  span
+    letter-spacing: 2px
+    font-size: 20px
+
+  &:hover
+    border-color: $neutrals4
+    color: $primary
+    +dark
+      color: $white
+
+  .active
+    span
+      margin-top: 0px
+
+.filter
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0 0 0 24px
+  flex-shrink: 0
+  border-radius: 24px
+  background: transparent
+  border: 2px solid $neutrals3
+  padding-right: 20px
+  +dm-sans
+  font-size: 16px
+  line-height: 48px
+  color: $neutrals8
+  transition: background .2s, box-shadow .2s
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  +m
+    width: 100%
+
+  &.active
+    .toggle
+      svg, img
+        &:first-child
+          display: none
+
+        &:nth-child(2)
+          display: inline-block
+
+  .text
+    margin-left: 10px
+
+.toggle
+  display: flex
+  justify-content: center
+  align-items: center
+  background: none
+  font-size: 0
+
+  svg, img
+    fill: $neutrals8
+
+    &:first-child
+      width: 18px
+      height: 18px
+
+    &:nth-child(2)
+      display: none
+      width: 10px
+      height: 10px
+
+.filters
+  display: none
+  padding: 32px 0
+  border-top: 1px solid $neutrals6
+  +dark
+    border-color: $neutrals3
+
+  &.active
+    display: block
+
+.sorting
+  display: flex
+  flex-wrap: wrap
+  margin: -32px -16px 0
+  +d
+    margin: -24px -8px 0
+  +m
+    display: block
+    margin: 0
+
+.cell
+  flex: 0 0 calc(25% - 32px)
+  max-width: calc(25% - 32px)
+  margin: 32px 16px 0
+  +d
+    flex: 0 0 calc(25% - 16px)
+    max-width: calc(25% - 16px)
+    margin: 24px 8px 0
+  +t
+    flex: 0 0 calc(50% - 32px)
+    max-width: calc(50% - 32px)
+    margin: 32px 16px 0
+  +m
+    max-width: 100%
+    margin: 0
+    &:not(:last-child)
+      margin-bottom: 20px
+
+.label
+  margin-bottom: 12px
+  +hairline-2
+  color: $neutrals5
+
+.scale
+  display: flex
+  justify-content: space-between
+  margin-bottom: -3px
+  font-weight: 500
+
+.list
+  +m
+    margin: 0 -8px
+
+.slider
+  display: flex
+  flex-wrap: wrap
+  margin: -32px -16px 0
+  +m
+    display: block
+    margin: 0
+
+.card
+  flex: 0 0 calc(25% - 32px)
+  max-width: calc(25% - 32px)
+  margin: 32px 16px 0
+  +d
+    flex: 0 0 calc(33.333% - 32px)
+    max-width: calc(33.333% - 32px)
+  +t
+    flex: 0 0 calc(50% - 32px)
+    max-width: calc(50% - 32px)
+  +m
+    max-width: 100%
+    margin: 0
+
+.btns
+  margin-top: 32px
+  text-align: center
+  +m
+    display: none
+
+.button
+  box-shadow: 0 0 0 2px $neutrals4 inset !important
+  margin: 30px auto
+  max-width: 500px

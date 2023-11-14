@@ -1,0 +1,19 @@
+@import "../../../../styles/helpers";
+
+.control {
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 64px 64px -24px rgba(31, 47, 70, 0.12);
+  border: 1px solid $neutrals6;
+
+  @include m() {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 16px;
+  }
+
+  @include dark() {
+    background: $neutrals2;
+    border-color: $neutrals3;
+  }
+}

@@ -1,0 +1,132 @@
+@import ../../../styles/helpers
+
+.section
+    // padding: 0px
+    margin-top: 2rem
+    margin-bottom: 3rem
+    padding-right: 10%
+    padding-left: 10%
+    width: 100%
+    .head
+        width: 100%
+        .title
+            text-align: center
+            margin-bottom: 19px
+        .sub_title
+            color: $neutrals5
+            width: 100%
+            margin-bottom: 8%
+.container
+    padding: 16px
+    padding-right: 32px
+    padding-left: 32px
+    padding-top: 32px
+    margin-bottom: 5%
+    border-radius: 8px
+    box-shadow: 0 0 0 1px $neutrals2_5 inset
+.row
+    justify-content: center
+    .field
+        width: 70%
+    .dropdown
+        min-width: 256px
+        margin-right: 12px
+        +m
+            min-width: 100%
+
+.search
+    width: 304px
+    button
+        right: 0
+
+.table-responsive
+    display: block
+    width: 100%
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar
+    margin-top: 5%
+
+table
+    text-align: left
+    thead
+        background: transparent
+        height: 37px
+
+        +dark
+            background: transparent
+    tr:not(:first-child)
+        border-top: 1px solid $neutrals4
+        +dark
+            border-color: $navy_blue
+    tbody
+        box-shadow: 0 0 0 1px $neutrals6 inset
+        border-radius: 8px
+        +dark
+            box-shadow: 0 0 0 1px $neutrals2 inset
+        .title
+            font-weight: 200
+            +poppins
+
+        .price
+            font-weight: 300
+        .estimate
+            color: $neutrals4
+    td,caption
+        padding: 20px
+    thead th
+        +caption-bold-1
+        padding: 10px 20px
+    th
+        font-weight: 600
+        +body-1
+    td,caption,th
+        vertical-align: middle
+        .btn
+            font-weight: 600
+        .submit
+            color: $primary
+        .pending
+            color: $yellow
+        .leave
+            color: $pink
+caption
+    +body-2
+    font-weight: bold
+    text-align: left
+    svg
+        transform: rotate(90deg)
+        margin-right: 15px
+
+svg
+    &.event
+        margin-right: 8px
+.item
+    display: flex
+    flex-direction: row
+    align-items: center
+    img
+        width: 38px
+        height: 38px
+        border-radius: 8px
+        margin-right: 10px
+    .details
+        display: flex
+        flex-direction: column
+.loader
+    height: 50px
+    width: 50px
+    margin: 0 auto
+.link
+    color: $neutrals8
+    .icon
+        margin-left: 8.5px
+        stroke: $neutrals4
+.dropdown_body
+    border-radius: 8px
+    box-shadow: 0px 40px 64px -32px rgba(15, 15, 15, 0.15)
+    +dark
+        background: $neutrals1
+        box-shadow: inset 0 0 0 1px $neutrals3, 0 4px 12px rgba($neutrals1, .1)
+.image
+    margin-left: 12px

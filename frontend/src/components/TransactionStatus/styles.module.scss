@@ -1,0 +1,45 @@
+@import "./../../styles/helpers";
+
+
+.table {
+  --border: 2px solid #{ $neutrals2 };
+  --spacing: 20px;
+
+  border: var(--border);
+  border-radius: 8px;
+  max-width: 550px;
+  width: 100%;
+}
+
+.thead {
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border);
+  padding: var(--spacing);
+
+  & div:last-child {
+    text-align: right;
+  }
+}
+
+.tbody {
+  padding: var(--spacing);
+
+  & [role='row'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    & :last-child {
+      text-align: right;
+    }
+  }
+}
+
+.hash {
+  display: inline-block;
+  font: inherit;
+  color: $blue2;
+  text-align: inherit;
+}

@@ -1,0 +1,144 @@
+@import ../../styles/helpers
+
+=border
+  --border-color: #{ $neutrals2 }
+  transition: border-color 0.5s
+  border-radius: 12px
+  border: 2px solid var(--border-color)
+  +dark
+    --border-color: #{ $neutrals2 }
+
+.label
+  margin-bottom: 12px
+  display: block
+  +hairline-2
+  color: $neutrals5
+
+.withError
+  --border-color: #{ $pink } !important
+
+.withPrefix,
+.withSuffix
+  display: flex
+  +border
+  height: $input-height
+
+  input
+    height: initial
+    color: inherit
+
+  input, input:focus
+    border-color: transparent
+
+  &:hover, &:focus-within
+    --border-color: #{ $neutrals4 }
+
+.prefix, .suffix
+  display: flex
+  align-items: center
+
+.prefix
+  padding-left: 1em
+
+.suffix
+  padding-right: 1em
+
+.error
+  +error
+
+.input
+  +border
+  width: 100%
+  height: $input-height
+  padding: 0 14px
+
+  background: none
+  +poppins
+  +caption-bold-1
+  color: $neutrals2
+  transition: border-color .2s
+  +dark
+    border-color: $neutrals3
+    color: $neutrals8
+  +placeholder
+    color: $neutrals4
+
+  &:focus
+    border-color: $neutrals4
+
+.input_2
+  width: 100%
+  height: 50px
+  padding: 0 42px 0 16px
+  background: none
+  border: none
+  +poppins
+  +caption-2
+  transition: border-color .2s
+  +placeholder
+    color: $neutrals4
+  +dark
+    color: $neutrals8
+
+  &:focus
+    border-color: $neutrals4
+
+.icon
+
+  svg
+    fill: $neutrals4
+    transition: fill .2s
+
+  &:hover
+    svg
+      fill: $primary
+
+.card
+  border: 2px solid $neutrals6
+  border-radius: 8px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  padding-left: 8px
+  padding-right: 8px
+  +dark
+    border-color: $neutrals3
+    color: $neutrals8
+
+  &:focus
+    border: 2px solid $neutrals3
+
+.lead
+  +poppins
+  +caption-bold-1
+  font-size: 20px
+  font-weight: 200
+
+
+.percentWrapper
+  position: relative
+
+  input
+    position: relative
+    z-index: 1
+
+  .percentSymbol
+    position: absolute
+    top: 12px
+    right: 15px
+    color: $navy_blue
+    font-weight: 600
+    font-size: 14px
+
+  &:focus-within .percentSymbol
+    color: $neutrals8
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield

@@ -1,0 +1,86 @@
+@import ../../styles/helpers
+
+.filter_container
+    background-color: $neutrals7
+    +dark
+        background-color: $neutrals1_6
+        border-right: 1px solid $neutrals3
+    .head
+        display: none
+        +m
+            display: flex
+            border-bottom: 1px solid $neutrals1
+            +dark
+                background-color: $neutrals1
+                color: $neutrals8
+                border-color: $neutrals3
+
+.button
+    width: 100%
+
+.c_row
+    display: none
+    +t
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: stretch
+        padding-top: 24px
+        padding-bottom: 18px
+        padding-left: 12px
+        padding-right: 12px
+.c_col
+    padding-right: 10px
+
+.cont_overlay
+    +m
+        width: 200px
+        height: 200px
+        position: relative
+        margin: 20px
+.box
+    +m
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 20
+        opacity: 1
+
+.fab
+    display: none
+    +m
+        display: block
+        z-index: 40
+        padding-right: 5%
+        padding-left: 5%
+        position: fixed
+        top: 90%
+        opacity: 1
+    // +m
+    //     left: 30%
+.close
+    display: none
+    +m
+        display: block
+        z-index: 20
+        position: fixed
+        left: 85%
+        bottom: 90%
+        opacity: 1
+
+.filter_overlay
+    +m
+        position: fixed
+        // top: 13%
+        left: 0
+        z-index: 30
+        overflow: auto
+        opacity: 1
+
+.fab_h
+    display: none
+.filters_h
+    +m
+        display: none

@@ -1,0 +1,235 @@
+@import ../../../styles/helpers
+
+.container
+    // max-width: 896px    
+    padding-right: 10%
+
+.control
+    padding-bottom: 0
+.top
+    margin-bottom: 64px
+    +m
+        margin-bottom: 32px
+        padding-bottom: 16px
+        border-bottom: 1px solid $neutrals6
+        +dark
+            border-color: $neutrals3
+
+.title
+    margin-bottom: 16px
+
+.info
+    color: $neutrals4
+    strong
+        font-weight: 500
+        color: $neutrals2
+        +dark
+            color: $neutrals8
+
+.row
+    display: flex
+    margin: 0 -16px
+    +d
+        display: block
+        margin: 0
+
+.col
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin: 0 16px
+    +d
+        width: 100%
+        margin: 0
+    &:not(:last-child)
+        +d
+            margin-bottom: 64px
+        +m
+            margin-bottom: 32px
+            padding-bottom: 32px
+            border-bottom: 1px solid $neutrals6
+            +dark
+                border-color: $neutrals3
+
+.user
+    display: flex
+    +d
+        max-width: 416px
+
+.avatar
+    flex-shrink: 0
+    width: 128px
+    height: 128px
+    margin-right: 32px
+    +m
+        width: 64px
+        height: 64px
+        margin-right: 16px
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+
+.details
+    flex-grow: 1
+
+.stage
+    margin-bottom: 8px
+    +body-bold-2
+
+.text
+    margin-top: 18px
+    margin-bottom: 16px
+    +caption-2
+    color: $neutrals4
+
+.file
+    display: inline-block
+    position: relative
+    overflow: hidden
+
+.load
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 140px
+    opacity: 0
+
+.list
+    margin-bottom: 40px
+    +d
+        display: flex
+        margin: 0 -20px 64px
+    +m
+        display: block
+        margin: 0 0 32px
+
+.item
+    +d
+        flex: 0 0 calc(50% - 40px)
+        width: calc(50% - 40px)
+        margin: 0 20px
+    +m
+        width: 100%
+        margin: 0
+    & > .button
+        margin-top: 32px
+    &:not(:last-child)
+        margin-bottom: 40px
+        +d
+            margin-bottom: 0
+        +m
+            margin-bottom: 32px
+
+.category
+    margin-bottom: 32px
+    +body-bold-2
+
+.fieldset
+    & > .field
+        &:not(:last-child)
+            margin-bottom: 32px
+
+.box
+    position: relative
+    .button
+        position: absolute
+        right: 12px
+        bottom: 8px
+        height: 32px
+        padding: 0 10px
+.button
+    padding-left: 30px
+    padding-right: 30px
+
+.note
+    color: $neutrals4
+
+.btns
+    display: flex
+    margin-top: 40px
+    padding-top: 40px
+    border-top: 1px solid $neutrals6
+    +m
+        display: block
+        text-align: center
+    +dark
+        border-color: $neutrals3
+    .button
+        +m
+            width: 100%
+        &:not(:last-child)
+            margin-right: 32px
+            +m
+                margin: 0 0 32px
+
+.clear
+    display: inline-flex
+    align-items: center
+    +button-1
+    color: $neutrals4
+    transition: color .2s
+    svg
+        margin-right: 8px
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover
+        color: $primary
+        svg
+            fill: $primary
+.chips
+    margin-top: 22px
+    margin-bottom: 22px
+.button
+    margin-right: 10px
+    &:hover
+        background-color: $neutrals5
+        color: $neutrals1_6
+.btn_o
+    background-color: $neutrals7
+    color: $neutrals1
+    +dark
+        background-color: $neutrals2
+        color: $neutrals7    
+
+.btn_s
+    background-color: $neutrals2
+    color: $neutrals7
+    +dark
+        background-color: $neutrals7
+        color: $neutrals1
+
+.btn_border
+    border-radius: 8px
+.btn_no_border
+    color: $neutrals5
+    border: none
+.act_label
+    margin-bottom: 8px
+    +button-3
+.act_value
+    +body-bold-1
+.column
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: stretch
+    flex-shrink: 3
+.column_2
+    display: flex
+    align-items: stretch
+    justify-content: space-around
+    flex-direction: column
+    flex-grow: 1
+
+.column_3
+    flex-grow: 4
+    +m
+        flex-grow: 0
+.c_row
+    display: flex
+    margin-top: 20px
+    flex-direction: row
+
+.caption
+    +body-bold-2

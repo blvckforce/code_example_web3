@@ -1,0 +1,99 @@
+@import "../../../styles/helpers";
+
+$wrapper-space: 32px;
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: $wrapper-space;
+  background: rgba($neutrals1, .9) !important;
+  opacity: 0;
+  animation: showModal .4s forwards;
+  overflow: auto;
+  z-index: 999;
+  @include m {
+    padding: $wrapper-space ($wrapper-space / 2);
+  }
+  @include dark {
+    background: rgba($neutrals2, .9);
+  }
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+  //padding: 32px
+  background: $neutrals8;
+  border-radius: $wrapper-space / 2;
+  z-index: 2;
+  border: 1px solid $navy_blue;
+  @include dark {
+    background: $neutrals1;
+    box-shadow: inset 0 0 0 1px $neutrals2_5;
+  }
+}
+
+.header {
+  font-size: 32px; /* h4 */
+  min-height: 1.25em;
+}
+
+.divider {
+  font-size: inherit;
+  display: block;
+  height: 1px;
+  max-width: 100%;
+  background-color: $neutrals4;
+  margin: $wrapper-space 0;
+  opacity: 0.1;
+}
+
+.close {
+  position: absolute;
+  top: $wrapper-space;
+  right: $wrapper-space;
+  width: 40px;
+  height: 40px;
+  background: inherit;
+  border: 2px solid $navy_blue;
+  border-radius: 50%;
+  font-size: 0;
+
+  svg {
+    fill: $neutrals2;
+    transition: transform .2s;
+  }
+
+  @include dark {
+    border-color: $navy_blue;
+    background: inherit;
+    svg {
+      fill: $neutrals8;
+    }
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.wrapper {
+  margin: $wrapper-space;
+}

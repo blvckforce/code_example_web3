@@ -1,0 +1,58 @@
+@import ../../../styles/helpers
+
+.container
+  padding: 16px
+  margin-top: 32px
+  display: flex
+  flex-direction: column
+  gap: 30px
+  +m
+    gap: 15px 0
+
+.row
+  align-items: end
+  justify-content: space-between
+  gap: 30px
+
+  +m
+    gap: 15px
+    flex-direction: column
+    align-items: center
+
+
+.field
+  width: 100%
+  div
+    line-height: 20px
+
+.confirm
+  margin-bottom: 10px
+
+  &.error
+    place-self: center
+
+.twitter
+  align-items: center
+
+.relative
+  position: relative
+  width: 100%
+
+.copy
+  position: absolute
+  width: 40px
+  height: 48px
+  background: radial-gradient(black, transparent)
+  border-bottom-left-radius: 12px
+  border-top-left-radius: 12px
+  bottom: 0
+
+.twitterVerified
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 20px
+
+.button
+  margin: auto 0
+  min-width: 120px

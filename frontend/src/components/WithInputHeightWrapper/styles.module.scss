@@ -1,0 +1,27 @@
+@import '../../styles/helpers';
+
+.likeInput {
+  display: flex;
+  height: $input-height;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.fakeError {
+
+  & :is(span, p) {
+    @include error;
+    max-height: 1em;
+    overflow: hidden;
+    display: inline-block;
+    max-width: min-content;
+    color: transparent !important;
+  }
+
+  @include m() {
+    :is(span, p) {
+      display: none;
+    }
+  }
+}
+

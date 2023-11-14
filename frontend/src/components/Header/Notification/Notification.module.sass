@@ -1,0 +1,169 @@
+@import ../../../styles/helpers
+
+.notification
+    position: relative
+    background: rgba(239, 70, 111, 0.2)
+    border: 1px solid $pink
+    box-sizing: border-box
+    border-radius: 72px
+    &:hover
+        border: 1px dashed $primary
+    +m
+        position: static
+
+.head
+    position: relative
+    width: 40px
+    height: 40px
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    svg
+        fill: $pink
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $primary
+    &.active
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            background: $green
+
+.body
+    position: absolute
+    z-index: 4
+    top: calc(100% + 34px)
+    width: 359px
+    margin-left: -205px
+    padding: 20px
+    box-shadow: 0px 16px 64px 0 rgba(31, 47, 70, 0.4)
+    border-radius: 24px
+    background: $neutrals8
+    opacity: 0
+    transform: scale(.9)
+    transform-origin: 50% 50px
+    will-change: transform
+    animation: showNotification .4s forwards
+    +m
+        left: 16px
+        right: 16px
+        top: calc(100% + 16px)
+        width: auto
+        margin: 0
+        padding: 32px 16px
+        box-shadow: 0px 16px 32px 0 rgba(31, 47, 70, 0.4)
+    &:before
+        content: ""
+        position: absolute
+        left: 63%
+        bottom: 100%
+        width: 58px
+        height: 14px
+        transform: translateX(-50%)
+        border-top: 1px solid $primary
+        background: none
+        +m
+            display: none
+    +dark
+        background: $neutrals1_5
+        box-shadow: 0px 16px 32px 0 rgba($neutrals1, 0.6)
+
+@keyframes showNotification
+    0%
+        opacity: 0
+        transform: scale(.9)
+    100%
+        opacity: 1
+        transform: scale(1)
+
+.title
+    margin-bottom: 16px
+    +m
+        margin: 0 16px
+
+.list
+    margin: 0 -16px
+    +m
+        margin: 0
+
+.item
+    position: relative
+    display: flex
+    align-items: center
+    padding: 16px 40px 16px 16px
+    border-radius: 16px
+    transition: background .2s
+    &:hover
+        background: $neutrals7
+        +dark
+            background: $neutrals2
+
+.preview
+    flex-shrink: 0
+    width: 64px
+    height: 64px
+    margin-right: 24px
+    +m
+        margin-right: 16px
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 16px
+
+.details
+    flex-grow: 1
+
+.subtitle
+    +body-bold-2
+    color: $neutrals1
+    +dark
+        color: $neutrals8
+
+.price
+    font-weight: 500
+    color: $neutrals3
+    +dark
+        color: $neutrals4
+
+.date
+    +caption-2
+    color: $neutrals4
+
+.status
+    position: absolute
+    top: 50%
+    right: 16px
+    transform: translateY(-50%)
+    width: 12px
+    height: 12px
+    border-radius: 50%
+
+.button
+    top: 40px
+    right: 32px
+    height: 26px
+    +m
+        position: static
+        width: 100%
+        margin-top: 20px
+
+.loader
+    margin: 0 auto
+
+.bottomWrapper
+    display: flex
+    justify-content: space-between
+    .readButton
+        color: white
+        border-radius: 20px
+        border: 1px solid white
+        padding: 0 16px
+        font-weight: bold
+        line-height: 10px
+        z-index: 2
+

@@ -1,0 +1,157 @@
+@import ../../../../styles/helpers
+
+.userName
+  color: $neutrals8
+  font-size: 42px
+  font-weight: 700
+  font-family: 'DM Sans', sans-serif
+  text-transform: uppercase
+  text-align: center
+
+.userDetails
+  margin-top: 10px
+
+.textCenter
+  text-align: center
+
+
+.greyText
+  color: $neutrals4
+  font-size: 14px
+  font-weight: 700
+
+.greyField
+  display: inline-block
+  height: 34px
+  line-height: 34px
+  margin-left: 10px
+  padding: 0 15px
+  background: $neutrals2
+  color: $neutrals8
+  font-size: 14px
+  font-weight: 700
+  box-sizing: border-box
+  border-radius: 17px
+
+
+.copy
+  margin-left: 8px
+  cursor: pointer
+
+  svg
+    fill: $primary
+    transition: fill .2s
+
+  &:hover
+    svg
+      fill: darken($primary, 10)
+
+.description
+  max-width: 438px
+  margin: 30px auto 0
+  line-height: 16px
+
+.circleButtons
+  margin-top: 30px
+  text-align: center
+
+  .roundButton
+    display: inline-block
+    border: 2px solid $neutrals3
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    line-height: 34px
+    text-align: center
+    cursor: pointer
+
+    &:first-child
+      margin-right: 10px
+
+    svg
+      fill: $neutrals4
+
+    &:hover
+      svg
+        fill: darken($neutrals4, 10)
+
+.tabs
+  margin-top: 40px
+  text-align: center
+
+.tabButton
+  display: inline-block
+  height: 34px
+  line-height: 34px
+  padding: 0 15px
+  font-size: 14px
+  font-weight: 700
+  box-sizing: border-box
+  color: $neutrals4
+  cursor: pointer
+
+  &.active
+    background: $neutrals8
+    color: $neutrals2
+    border-radius: 17px
+
+  &:first-child
+    margin-right: 20px
+
+
+.itemsAmount
+  font-weight: 400
+  margin-left: 10px
+
+.search
+  width: 100%
+  max-width: initial
+  margin: 32px 0
+
+  button
+    padding-top: 0 !important
+
+.input
+  width: 100%
+  padding-top: 0 !important
+  font-family: inherit
+
+.itemsBlock
+  margin: 60px auto
+  +items-list
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+
+.user
+  padding: 0px 28px
+  background: transparent
+  text-align: center
+  position: relative
+  margin-top: -58px
+  +dark
+    border-color: $neutrals3
+
+.avatar
+  width: 102px
+  height: 102px
+  margin: 0 auto 20px
+  border: 4px solid $neutrals8
+  border-radius: 72px
+  +dark
+    border-color: $neutrals1
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 50%
+
+.modal
+  max-width: 50%
+  +t
+    max-width: 60%
+  +m
+    max-width: 70%
+  +a
+    max-width: 80%
+  +s
+    max-width: 90%

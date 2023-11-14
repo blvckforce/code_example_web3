@@ -1,0 +1,138 @@
+@import ../../styles/helpers
+
+.section
+  margin-top: 2rem
+  margin-bottom: 3rem
+  width: 100%
+  +rmin($t)
+    padding-right: 18%
+    padding-left: 18%
+
+  .head
+    width: 100%
+
+    .title
+      // +poppins
+      text-align: center
+      margin-bottom: 8px
+
+    .sub_title
+      color: $neutrals5
+      width: 100%
+      margin-bottom: 8%
+
+.container
+  padding: 32px 32px 16px
+  margin-bottom: 5%
+  border-radius: 8px
+  box-shadow: 0 0 0 1px $neutrals2_5 inset
+  +m
+    padding: 16px 16px 8px
+
+.row
+  .field
+    width: 70%
+    +m
+      width: 100%
+
+.center
+  justify-content: center
+
+.title
+  font-weight: 500
+
+.subtitle
+  margin-top: 5px
+  color: $neutrals4
+  font-size: 14px
+
+.wallet
+  margin-top: 10px
+  align-items: end
+  +m
+    flex-direction: column
+    align-items: center
+
+  .button
+    margin-top: 8%
+
+  .confirm
+    width: min-content
+    padding: 3% 6.5% 3% 7%
+    background: $neutrals3
+
+    &:hover
+      background: $neutrals4
+
+.confirm
+  width: 35%
+
+.field
+  margin-top: 30px
+  width: 100%
+
+.readmore
+  margin-top: 3%
+  padding: 3%
+  text-align: center
+  border-top: 1px solid $neutrals3
+
+  .more
+    color: $primary
+
+.gap
+  margin-right: 20px
+
+.agent
+  display: flex
+  justify-content: space-between
+  padding: 10px
+  margin-bottom: 30px
+  align-items: center
+  gap: 10px
+  +s
+    flex-wrap: wrap
+    div
+      width: 100%
+      text-align: center
+
+  [class^="row"]
+    align-items: center
+    +m
+      margin-right: 10px
+
+  .name
+    color: $neutrals4
+    word-break: break-word
+    +dark
+      color: $neutrals8
+    +m
+      display: inline-block
+      +ellipsis
+    +s
+      max-width: 110px
+
+  .agent_name_block
+    align-items: start
+    flex-direction: column
+
+    & > span:first-child
+      color: $neutrals1
+      +dark
+        color: $neutrals4
+
+  img
+    width: 50px
+    border-radius: 8px
+    margin-right: 10px
+
+.block
+  display: block
+
+.actions
+  display: flex
+  justify-content: space-between
+  +s
+    width: 100%
+    justify-content: center
+    margin-top: 10px

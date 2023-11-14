@@ -1,0 +1,70 @@
+@import "src/styles/helpers";
+
+.root {
+
+  --border: 2px solid #{ $navy_blue_1 };
+
+  //  TODO: container for rows
+  padding: $containers-spacing;
+  border: var(--border);
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  margin: $containers-spacing 0;
+}
+
+
+.row {
+  width: 100%;
+  padding: $containers-spacing 0;
+  color: $neutrals4;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-bottom: var(--border);
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  min-height: $input-height;
+}
+
+.loader {
+  width: $input-height;
+}
+
+.avatar {
+  width: $input-height;
+  height: $input-height;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.offer {
+  display: flex;
+  gap: $items-gap;
+}
+
+.accent {
+  @include caption-1();
+  color: $neutrals8;
+}
+
+.info {
+  flex: 1;
+
+  & p {
+    max-width: 100%;
+    word-break: break-all;
+  }
+}

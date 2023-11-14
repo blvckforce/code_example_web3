@@ -1,0 +1,59 @@
+@import ../../../styles/helpers
+
+.row
+    display: flex
+    flex-direction: row
+    position: relative
+    height: 100%
+    width: 100%
+    +t
+        display: block
+
+.left
+    position: fixed
+    width: 35%
+    height: 100%
+    z-index: 1
+    .img
+        width: 63%
+        height: 100%
+        +m
+            width: 100%
+            height: auto
+            position: absolute
+            top: -40%
+    +m
+        position: relative
+        width: 100%
+        height: 100px
+        overflow: hidden
+        
+
+.right
+    left: 34%
+    position: absolute
+    overflow: auto
+    margin-bottom: 40px
+    +d
+        margin-bottom: 50px
+    +m
+        margin-bottom: 40px
+        left: 0
+        display: relative
+    .body
+        margin-top: 10%
+
+.logo
+    position: fixed
+    top: 4%
+    left: 2%
+    z-index: 13
+    width: 35%
+    height: 100%
+    
+    +m
+        position: absolute
+        width: auto
+        height: auto
+        top: 25%
+        left: 5%

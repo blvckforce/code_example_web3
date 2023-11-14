@@ -1,0 +1,35 @@
+@import "../../../styles/helpers";
+
+.root {
+  p {
+    color: $neutrals4;
+    word-break: break-word;
+  }
+}
+
+.accent {
+  font-weight: bold;
+  color: $neutrals8;
+}
+
+.info {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      &:not(:first-child) {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
+}

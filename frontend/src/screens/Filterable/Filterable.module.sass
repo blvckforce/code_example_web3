@@ -1,0 +1,302 @@
+@import ../../styles/helpers
+
+.section
+  padding: 0
+
+.container
+  padding: 0
+  margin: 0
+  max-width: 100%
+
+.top
+  display: flex
+  flex-direction: column
+  margin: 30px 10px
+
+  .selections
+    margin-top: 30px
+
+    .filter_button
+      margin-right: 5px
+      margin-bottom: 5px
+
+    svg
+      margin-right: 0px !important
+
+.filter_button
+  border-radius: 8px
+  height: 34px
+
+.link
+  flex-shrink: 0
+  margin: 0 6px
+  padding: 6px 12px
+  border-radius: 14px
+  background: none
+  +button-2
+  color: $neutrals4
+  transition: all .2s
+  +m
+    margin: 0
+
+  &:hover
+    color: $neutrals3
+    +dark
+      color: $neutrals6
+
+  &.active
+    background: $neutrals3
+    color: $neutrals8
+    +dark
+      background: $neutrals8
+      color: $neutrals2
+
+  &:not(:last-child)
+    +m
+      margin-right: 12px
+
+.row
+  display: flex
+  align-items: stretch
+  +t
+    display: block
+
+.wrapper
+  flex-grow: 1
+  margin-bottom: 80px
+  +d
+    margin-bottom: 50px
+  +m
+    margin-bottom: 40px
+  +t
+    padding-left: 0
+
+.filters
+  flex-shrink: 0
+  width: 326px
+  align-self: flex-start
+  position: sticky
+  top: var(--header-height, 81px)
+  //height: calc(100vh - var(--header-height, 81px))
+  background-color: $neutrals7
+  border-right: 1px solid $neutrals6
+  +dark
+    background-color: $neutrals1_6
+    border-right: 1px solid $neutrals3
+  +t
+    width: 100%
+    margin-bottom: 12px
+
+  .head
+    border-bottom: 1px solid $neutrals6
+    padding: 20px
+    font-size: 14px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    color: $neutrals4
+    +dark
+      color: $neutrals8
+      border-color: $neutrals3
+
+    .title
+      font-weight: bold
+
+      svg
+        margin-right: 20px
+        fill: $neutrals4
+        stroke: $neutrals4 !important
+
+    svg
+      fill: $neutrals4
+      transition: fill .2s
+      stroke: $neutrals4
+
+  .body
+    color: $neutrals4
+
+    svg
+      fill: $neutrals4
+
+  .status, .category, .tags
+    display: grid
+    grid-gap: 10px
+    grid-column: 1
+    grid-template-columns: 1fr 1fr
+
+    button
+      width: 100%
+
+  .tags
+    padding: 20px 18px
+    background: $neutrals3
+    +dark
+      background: none
+
+    button
+      width: 90%
+      margin: 0px
+      padding: 0
+      justify-content: center
+
+      svg
+        fill: $neutrals8
+        margin: 0 !important
+        margin-right: 10px !important
+
+  .accordion
+    &.dropdown
+      z-index: 20
+
+  .price
+    .range
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      overflow: auto
+      align-items: center
+      margin: 20px 0
+      justify-content: space-evenly
+
+      .bridge
+        padding: 0 14px
+        color: $neutrals4
+
+  button:not([class^="row"])
+    height: 34px
+
+.no_filter
+  .body
+    padding-top: 30px
+    +m
+      padding-top: 0px
+
+.label
+  margin-bottom: 12px
+  +hairline-2
+  color: $neutrals5
+
+.reset
+  color: $primary
+  margin-left: 20px
+  +caption-bold-1
+
+.minimize
+  .filters
+    background-color: transparent
+    width: 84px
+
+    .head
+      border-bottom: none
+      justify-content: center
+
+      .title
+        display: none
+
+      .toggle
+        svg
+          transform: rotate(180deg)
+
+    .body
+      display: none
+
+    +t
+      border-right: none
+
+  .card
+    +rmin(1339)
+      flex: 0 0 calc(25% - 32px)
+      max-width: calc(25% - 32px)
+
+.c_row
+  display: none
+  +t
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: stretch
+    padding-top: 18px
+    padding-bottom: 18px
+    padding-left: 12px
+    padding-right: 12px
+
+.c_col
+  padding-right: 10px
+
+.mobile
+  display: none
+  +m
+    display: flex
+
+.mobile_filter
+  display: block
+  +m
+    display: none
+
+.collection
+  justify-content: start
+  align-items: center
+  margin: 0px
+
+  img
+    max-width: 42px
+    border-image: round
+    border-radius: 50%
+    margin-right: 12px
+    margin-top: 12px
+
+  .label
+    text-align: center
+    margin-top: 22px
+    margin-right: 4px
+    +caption-2
+    color: $neutrals5
+
+.border
+  background-color: $neutrals3
+  padding: 10px
+  max-width: 42px
+  height: 40px
+  border-radius: 100%
+  margin-right: 12px
+  margin-top: 12px
+  width: 100%
+
+.button_outline
+  border-radius: 8px
+  padding: 0 8px 8px 8px
+  background-color: $neutrals1_6
+  margin-top: 8px
+  border: none
+
+.searchField
+  margin-bottom: 10px
+
+.accordionName
+  max-width: 90%
+  display: flex
+  align-items: center
+  gap: 10px
+
+  .title
+    text-transform: capitalize
+    flex: 1
+    display: flex
+    justify-content: space-between
+
+.checkboxGroup
+  margin-top: 20px
+  display: flex
+  gap: 20px
+  flex-direction: column
+
+.checkboxName
+  width: 100%
+  display: flex
+  justify-content: space-between
+
+.checkbox
+
+.search
+  input
+    padding-top: 0 !important

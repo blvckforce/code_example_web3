@@ -1,0 +1,31 @@
+@import "/src/styles/helpers";
+
+.root {
+  padding: $items-gap 0;
+
+  & h3, p {
+    margin: 1em 0;
+  }
+
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.buttonsBlock {
+  padding: $items-gap 0;
+  display: flex;
+  gap: $items-gap;
+  @include m{
+    flex-wrap: wrap;
+  }
+}
+
+.button {
+  border-radius: 10px;
+  width: 100%;
+}

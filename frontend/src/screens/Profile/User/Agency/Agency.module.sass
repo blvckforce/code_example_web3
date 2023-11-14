@@ -1,0 +1,84 @@
+@import ../../../../styles/helpers
+
+.agent
+    margin-bottom: 25px
+    .button
+        height: 32px
+        padding: 2px 12px
+        margin-bottom: 25px
+        .label
+            +caption-1
+            padding-right: 8px
+    svg
+        fill: $neutrals4
+.agent_tab
+    border-radius: 16px
+    width: min-content
+    margin: 10px auto 30px
+    align-items: center
+    box-shadow: 0 0 0 1px $neutrals1_6 inset
+    padding: 0 0 0 9px
+    span
+        color: $neutrals4
+        margin-right: 6px
+    .name
+        color: $neutrals4
+        +caption-1
+        +dark
+            color: $neutrals8
+    img
+        height: 30px
+        width: 30px
+        border-radius: 50%
+        margin-right: 12px
+    +dark
+        background-color: $neutrals1_6
+        box-shadow: 0 0 0 1px $neutrals4 inset
+        svg
+            fill: $primary
+    +m
+        width: auto
+
+.agent_tab_details
+    display: flex
+    align-items: center
+    span
+        +ellipsis
+        +m
+            &:first-child
+                display: none
+        +s
+            max-width: 50px
+
+    +m
+        flex-wrap: wrap
+.context_menu
+    background: $neutrals8
+    width: max-content
+    display: block
+    margin-top: 22.5%
+    transform: translateX(100%)
+    padding: 12px 10px
+    .btn
+        margin-bottom: 12px
+        width: 100%
+        justify-content: start
+
+    .label
+        color: $neutrals4
+        +dark
+            color: $neutrals8
+    +dark
+        background: $neutrals1_6
+        border-color: $neutrals1_5
+    &.active
+        visibility: visible
+        opacity: 1
+
+    +m
+        width: 80%
+        bottom: 0%
+        right: 10%
+        transform: none
+    +s
+        bottom: 10%

@@ -1,0 +1,62 @@
+@import ../../styles/helpers
+
+.body
+    display: flex
+    +m
+        display: block
+
+.menu
+    margin-top: 16px
+    display: grid
+    grid-gap: 16px
+    grid-template-columns: repeat(2,1fr)
+    width: 100%
+
+
+.link
+    display: -webkit-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 114px
+    padding: 4px 15px
+    background: $neutrals6
+    border: 1px solid $neutrals5
+    box-sizing: border-box
+    border-radius: 16px
+    &:hover
+        background: $neutrals8
+        border: 1px solid $neutrals6
+    img
+        width: 32px
+        height: 32px
+    span
+        margin-left: 6px
+        font-weight: 700
+        font-size: 16px
+        line-height: 32px
+        flex-shrink: 0
+        +m
+            +caption-2
+    +dark
+        color: $neutrals8
+        background: $neutrals1_6
+        border: 1px solid $neutrals3
+        &:hover
+            background: $neutrals2
+            border: 1px solid $neutrals3
+    
+    .loading,.active
+        background: transparent
+        display: block
+        position: absolute
+        width: 20px
+        height: 20px
+        margin-bottom: -65px
+        
+    .active
+        fill: $primary !important
+
+button[disabled]
+    cursor: not-allowed
+    

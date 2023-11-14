@@ -1,0 +1,134 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+
+    \:global(.slick-list)
+        overflow: hidden
+
+    \:global(.slick-slider)
+        position: relative
+
+        > button
+            position: absolute
+
+            box-shadow: none !important
+            top: calc(50% - 18px)
+
+            svg
+                fill: $neutrals4 !important
+
+    \:global(.slick-arrow):hover
+        border: 2px solid $neutrals4
+
+    \:global(.slick-next)
+        right: -50px
+
+
+    \:global(.slick-prev)
+        right: auto
+        left: -60px
+
+.head
+    max-width: 600px
+    margin: 0 auto 128px
+    text-align: center
+    +x
+        margin-bottom: 112px
+    +m
+        margin-bottom: 64px
+
+.stage
+    margin-bottom: 8px
+    +hairline-2
+    color: $neutrals4
+
+.wrapper
+    position: relative
+    margin: 0 -16px
+    width: 549px
+
+.row
+    display: flex
+    gap: 20px
+    +x
+        flex-direction: column
+    +t
+        //display: block
+
+    img
+        display: none
+
+    img[src]
+        display: block
+
+    .main
+        //min-width: 50%
+        flex-basis: 50%
+        img
+            width: 549px
+            height: 549px
+        +x
+            align-self: center
+            position: relative
+
+    img
+        border-radius: 16px
+        object-fit: cover
+
+.mainImage
+    width: 549px
+    height: 549px
+
+.column
+    position: relative
+    width: 263px
+    height: 263px
+
+.gallery
+    flex-basis: 50%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 20px
+    +x
+        align-self: center
+    +m
+        // margin-top: 20px
+
+    img
+        width: 263px
+        height: 263px
+        border-radius: 16px
+a
+    color: $neutrals8
+
+.main_title
+    +body-bold-1
+    text-align: center
+    margin-bottom: 60px
+    font-size: 40px
+
+.details
+    position: absolute
+    top: 20px
+    left: 20px
+    .title
+        +body-bold-1
+
+.get_featured
+    color: $neutrals8
+    +body-bold-1
+    margin-top: 30px
+
+.feature_modal
+    ol
+        list-style-type: auto
+        margin-top: 30px
+        li
+            padding: 5px
+    p
+        margin: 20px 0
+
+.actions
+    display: flex
+    justify-content: space-around
